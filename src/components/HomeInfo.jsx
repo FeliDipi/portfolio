@@ -7,10 +7,11 @@ const HomeInfo = () =>
     return (
         <div className="home-content center">
             <img className="home-perfil" src={perfil} alt="Nicolás Felipe Dipierro" />
-            <div className="home-info center">
-                <div className="home-border-back"></div>
-                <div className="home-border-top"></div>
-                <div className="home-info-content center">
+            <div className="bg center">
+                <div className="bg-border-back"></div>
+                <div className="bg-border-top"></div>
+                <div className="bg-border-bottom"></div>
+                <div className="bg-content center">
                     <div className="home-info-text center">
                         <h4 className="home-info-position">Full Stack Developer / Game Developer</h4>
                         <h4 className="home-info-studies">Student of Ing. Software advanced</h4>

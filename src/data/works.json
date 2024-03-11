@@ -1,0 +1,80 @@
+{
+    "works":
+    [
+        {
+            "id":0,
+            "name":"Novathena Enviorement",
+            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
+            "gallery": 
+            [
+                "https://cataas.com/cat",
+                "https://cataas.com/cat",
+                "https://cataas.com/cat"
+            ],
+            "date":"2022-03-05",
+            "duration":"8 month",
+            "enterprise":
+            {
+                "logo":"tuxdi.png",
+                "link":"https://tuxdi.com/es/inicio/"
+            },
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+        },
+        {
+            "id":1,
+            "name":"Novathena Enviorement",
+            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
+            "gallery": 
+            [
+                "https://cataas.com/cat",
+                "https://cataas.com/cat",
+                "https://cataas.com/cat"
+            ],
+            "date":"27/02/99",
+            "duration":"8 month",
+            "enterprise":
+            {
+                "logo":"tuxdi.png",
+                "link":"https://tuxdi.com/es/inicio/"
+            },
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+        },
+        {
+            "id":2,
+            "name":"Novathena Enviorement",
+            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
+            "gallery": 
+            [
+                "https://cataas.com/cat",
+                "https://cataas.com/cat",
+                "https://cataas.com/cat"
+            ],
+            "date":"27/02/99",
+            "duration":"8 month",
+            "enterprise":
+            {
+                "logo":"tuxdi.png",
+                "link":"https://tuxdi.com/es/inicio/"
+            },
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+        }
+    ]
+}
