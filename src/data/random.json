@@ -1,0 +1,36 @@
+{
+    "random":[
+        {
+            "icon":"material-symbols:videogame-asset-sharp",
+            "text":"Devotee to video games with a long career"
+        },        
+        {
+            "icon":"fluent:drink-coffee-24-filled",
+            "text":"Master of turning caffeine into code"
+        },        
+        {
+            "icon":"solar:bug-bold",
+            "text":"Debugger extraordinaire, turning bugs into features"
+        },        
+        {
+            "icon":"mdi:art",
+            "text":"Pixel perfectionist, refining interfaces to captivate users"
+        },
+        {
+            "icon":"game-icons:sprint",
+            "text":"Agile advocate, orchestrating sprints with precision"
+        },
+        {
+            "icon":"charm:search",
+            "text":"Framework explorer, navigating the ever-changing tech terrain"
+        },
+        {
+            "icon":"pajamas:branch",
+            "text":"Git guru, conducting symphonies of version control"
+        },
+        {
+            "icon":"material-symbols:architecture",
+            "text":"Code architect sculpting digital landscapes since 2021"
+        }     
+    ]
+}

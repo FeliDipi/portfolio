@@ -386,6 +386,7 @@ section
 .home-info-random
 {
   gap: 0.5rem;
+  flex-direction: column;
 }
 
 .home-info-random-icon
@@ -393,15 +394,24 @@ section
   width: 40px;
   height: 40px;
 
-  color: var(--gradient-color-2);
+  color: var(--gradient-color-4);
 }
 
 .home-info-random-text
 {
-  font-size: var(--font-p);
+  height: 40px;
+
+  text-align: center;
+
+  font-size: var(--font-small);
   font-weight: 700;
 
-  color: var(--gradient-color-2);
+  color: var(--gradient-color-4);
+}
+
+.inline-block
+{
+  display: inline-block;
 }
 
 .cv

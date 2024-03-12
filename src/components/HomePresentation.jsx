@@ -1,10 +1,12 @@
+import AnimatedText from "./AnimatedText";
+
 const HomePresentation = () =>
 {
     return (
         <div className="home-presentation center">
-            <h4 className="home-presentation-hi">Hi there!, i’m</h4>
-            <h4 className="home-presentation-name">Nicolás Felipe</h4>
-            <h4 className="home-presentation-lastname">Dipierro</h4>
+            <AnimatedText className={"home-presentation-hi"} text={"Hi there!, i’m"}/>
+            <AnimatedText className={"home-presentation-name"} text={"Nicolás Felipe"}/>
+            <AnimatedText className={"home-presentation-lastname"} text={"Dipierro"}/>
         </div>
     );
 }
