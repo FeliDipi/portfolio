@@ -28,6 +28,7 @@ const AnimatedText = ({className, text, repeatDelay, preHandle, postHandle }) =>
         const show = async () => 
         {
             if(!repeatDelay) await controls.start("hidden");
+            
             controls.start("visible");
 
             if(repeatDelay)
@@ -37,6 +38,7 @@ const AnimatedText = ({className, text, repeatDelay, preHandle, postHandle }) =>
                     if(preHandle) preHandle();
                     await controls.start("hidden");
                     if(postHandle) postHandle();
+
                     controls.start("visible");
                 }, repeatDelay);
             }

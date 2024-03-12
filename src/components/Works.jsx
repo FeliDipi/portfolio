@@ -1,20 +1,28 @@
-import Gallery from "./Gallery.jsx";
-import WorkItem from "./WorkItem.jsx";
-import WorkInfo from "./WorkInfo.jsx";
-import { useGallery } from "../hooks/useGallery.js";
+import { useState } from "react";
+import WorkPreview from "./WorkPreview.jsx";
+import WorkExtended from "./WorkExtended.jsx";
 
 const Works = () =>
 {
-    const { items } = useGallery();
+    const [workSelected, setWorkSelected] = useState(null);
+    const [extended, setIsExtended] = useState(false);
+
+    const handleSelect = (work) =>
+    {
+        setWorkSelected(work);
+        setIsExtended(true);
+    }
+
+    const handleClose = () =>
+    {
+        setIsExtended(false);
+    }
 
     return (
         <section id="works" className="center">
-            <WorkInfo/>
-            <Gallery>
-                {
-                    items.map(work=>(<WorkItem key={work.id} data={work}/>))
-                }
-            </Gallery>
+            {
+                extended?<WorkExtended work={workSelected} close={handleClose}/>:<WorkPreview selectHandle={handleSelect}/>
+            }
             <div className="bg work-bg center">
                 <div className="bg-border-back"></div>
                 <div className="bg-border-top"></div>

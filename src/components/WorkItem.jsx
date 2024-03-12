@@ -1,18 +1,20 @@
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
-const WorkItem = ({data}) => {
-
-  const {gallery} = data;
-
+const WorkItem = ({data, selectHandle}) => {
   return (
-    <div className="gallery-item work-item center">
-      <img className="work-item-img" src={`src/assets/images/${gallery[0]}`} />
+    <motion.div
+      whileTap={{scale:0.97}} 
+      className="gallery-item work-item center"
+      onClick={()=>selectHandle(data)}
+    >
+      <img className="work-item-img" src={`src/assets/images/${data.gallery[0]}`} />
       <div className="work-item-gradient"></div>
       <div className="work-item-expand center">
         <p className="work-item-expand-text">see more</p>
         <Icon className="work-item-expand-icon" icon="material-symbols:more" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
