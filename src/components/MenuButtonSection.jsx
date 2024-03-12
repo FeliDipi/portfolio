@@ -1,15 +1,35 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
-export const MenuButtonSection = ({icon, section}) =>
+export const MenuButtonSection = ({icon, section, currentSection}) =>
 {
+    const variantBg = 
+    {
+        select:{
+            backgroundColor:"#23B684",
+            rotate:"0deg"
+        },
+        unselect:
+        {
+            backgroundColor:"#032E46",
+            rotate:"15deg"
+        },
+    }
+
     return (
         <motion.div
             initial={{x:"200%"}}
+            animate={currentSection===section?"select":"unselect"}
+            whileTap={{scale:0.95}}
+            whileHover={"select"}
             className="mobile-menu-btn-content"
         >
-            <div className="mobile-menu-btn-bg"></div>
-            <a className="mobile-menu-btn center" href={section}>
+            <motion.div 
+                className="mobile-menu-btn-bg"
+                variants={variantBg}
+            >
+            </motion.div>
+            <a className="mobile-menu-btn center" href={`#${section}`}>
                 <Icon className="mobile-menu-btn-icon" icon={icon}/>
             </a>
         </motion.div>

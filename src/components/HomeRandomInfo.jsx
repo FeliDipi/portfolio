@@ -7,9 +7,9 @@ import AnimatedText from "./AnimatedText.jsx";
 const HomeRandomInfo = () =>
 {
     const [index, setIndex] = useState(0);
-    const [dope, setDope] = useState(random[0]);
-
     const controls = useAnimation();
+
+    const dope = random[index];
 
     const variants =
     {
@@ -32,12 +32,7 @@ const HomeRandomInfo = () =>
 
     const handleNextDope = () =>
     {
-        const newIndex = (index+1) % random.length;
-        setIndex(newIndex);
-        
-        const newDope = random[newIndex];
-        setDope(newDope);
-
+        setIndex((prev)=>((prev+1)%random.length));
         controls.start("visible");
     }
 

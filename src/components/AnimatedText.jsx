@@ -59,7 +59,7 @@ const AnimatedText = ({className, text, repeatDelay, preHandle, postHandle }) =>
             className={className}
             initial="hidden" 
             animate={controls}
-            transition={{staggerChildren:0.05, duration:0.25}}
+            transition={{staggerChildren:0.025, duration:0.25}}
             aria-hidden
         >
             {
