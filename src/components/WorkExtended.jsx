@@ -6,11 +6,6 @@ const WorkExtended = ({work, close}) =>
 {
     const { distance } = useDate(work.date);
 
-    const handleClose = () =>
-    {
-        close();
-    }
-
     const variants = {
         open:{
             backgroundColor:"#23B684",
@@ -42,8 +37,12 @@ const WorkExtended = ({work, close}) =>
     }
 
     return (
-        <div className="work-extended center">
-            <div onClick={handleClose} className="work-extended-close-btn center">
+        <motion.div 
+            className="work-extended center"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+        >
+            <div onClick={close} className="work-extended-close-btn center">
                 <motion.div 
                     className="work-extended-close-btn-bg"
                     initial={"close"}
@@ -93,7 +92,7 @@ const WorkExtended = ({work, close}) =>
                     <p className="work-extended-date">{`${distance} - ${work.duration} of duration`}</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
