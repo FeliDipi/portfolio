@@ -9,9 +9,9 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const Gallery = ({children, items}) =>
+const Gallery = ({children}) =>
 {
-  const {currentIndex, dragX, setIndex, onDragEnd} = useGallery({items});
+  const {currentIndex, dragX, setIndex, onDragEnd, items} = useGallery();
 
   return (
     <div className="gallery center">

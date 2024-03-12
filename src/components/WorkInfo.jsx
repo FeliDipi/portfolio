@@ -4,9 +4,14 @@ import { useDate } from "../hooks/useDate.js";
 import AnimatedText from "./AnimatedText.jsx";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { useGallery } from "../hooks/useGallery.js";
 
-const WorkInfo = ({work}) =>
+const WorkInfo = () =>
 {
+    const { currentItem } = useGallery();
+
+    const work = currentItem;
+
     const {distance} = useDate(work.date);
     const controls = useAnimation();
 

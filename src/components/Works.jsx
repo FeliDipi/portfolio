@@ -5,14 +5,14 @@ import { useGallery } from "../hooks/useGallery.js";
 
 const Works = () =>
 {
-    const { currentIndex, items } = useGallery();
+    const { items } = useGallery();
 
     return (
         <section id="works" className="center">
-            <WorkInfo work={items[currentIndex]} />
-            <Gallery items={items}>
+            <WorkInfo/>
+            <Gallery>
                 {
-                    items.map(item=>(<WorkItem key={item.id} data={item}/>))
+                    items.map(work=>(<WorkItem key={work.id} data={work}/>))
                 }
             </Gallery>
             <div className="bg work-bg center">

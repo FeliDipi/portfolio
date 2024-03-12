@@ -660,6 +660,13 @@ section
   color: var(--color-0);
 }
 
+.work-info-logo
+{
+  max-height: 30px;
+  height: 100%;
+  width: auto;
+}
+
 .work-info-footer
 {
   width: 100%;

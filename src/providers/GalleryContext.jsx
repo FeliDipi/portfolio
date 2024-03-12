@@ -44,6 +44,7 @@ export const GalleryProvider = ({children, items}) =>
 		<GalleryContext.Provider value={{
             items,
             currentIndex,
+            currentItem: items[currentIndex],
             dragX,
             setIndex,
             onDragEnd
