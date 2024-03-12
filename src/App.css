@@ -29,7 +29,7 @@
   --gradient-color-3: #23B684;  
   --gradient-color-4: #0F595E;
 
-  --gradient-0: linear-gradient(0deg, rgba(3, 46, 70,1)  10%,rgba(4, 61, 93, 0.15) 100%);
+  --gradient-0: linear-gradient(0deg, rgba(3, 46, 70,0.8)  10%,rgba(4, 61, 93, 0) 100%);
 
   --shadow-0: 0px 4px 4px 0px rgba(0,0,0,0.25);
 
@@ -94,7 +94,7 @@ section
   width: 100%;
   height: 100px;
 
-  top: 100%;
+  top: 97%;
   left: 0%;
 
   clip-path: polygon(0 0, 100% 0%, 100% 30%, 0 10%);
@@ -174,6 +174,61 @@ section
   height: 25px;
 
   color:var(--color-1);
+}
+
+/* Navbar mobile */
+
+.mobile-menu
+{
+  position: absolute;
+  
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: fit-content;
+  height: fit-content;
+
+  right: 0%;
+  top: 100%;
+
+  margin: 1.5rem;
+}
+
+.mobile-menu-btn-content
+{
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+}
+
+.mobile-menu-btn-bg
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--gradient-color-4);
+  box-shadow: var(--shadow-0);
+
+  transform: rotateZ(15deg);
+}
+
+.mobile-menu-btn
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-menu-btn-icon
+{
+  width: 50%;
+  height: 50%;
+
+  color: var(--color-1);
 }
 
 /* Home */
@@ -294,10 +349,11 @@ section
 .bg-content
 {
   flex-direction: column;
+  justify-content: flex-start;
 
   background-color: var(--color-0);
   
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   gap: 1.5rem;
 
   width: 100%;
@@ -336,12 +392,16 @@ section
 {
   width: 40px;
   height: 40px;
+
+  color: var(--gradient-color-2);
 }
 
 .home-info-random-text
 {
   font-size: var(--font-p);
   font-weight: 700;
+
+  color: var(--gradient-color-2);
 }
 
 .cv
@@ -435,7 +495,8 @@ section
 {
   position: relative;
 
-  width: 75%;
+  max-width: 300px;
+  width: 100%;
   height: 50px;
 }
 
@@ -780,4 +841,14 @@ section
   font-weight: 300;
 
   color: var(--color-1);
+}
+
+/* Responsive */
+
+@media screen and (min-width:1000px) {
+  .work-item-img
+  {
+    width: 100%;
+    height: auto;
+  }
 }
