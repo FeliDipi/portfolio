@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const AnimatedText = ({className, text, repeatDelay, handle }) =>
+const AnimatedText = ({className, text, repeatDelay, preHandle, postHandle }) =>
 {
     const controls = useAnimation();
     const ref = useRef(null);
@@ -32,12 +32,12 @@ const AnimatedText = ({className, text, repeatDelay, handle }) =>
             {
                 timeout = setTimeout(async () =>
                 {
+                    if(preHandle) preHandle();
                     await controls.start("hidden");
-                    if(handle) handle();
+                    if(postHandle) postHandle();
                     controls.start("visible");
                 }, repeatDelay);
             }
-            
         }
 
         if(isInView)
