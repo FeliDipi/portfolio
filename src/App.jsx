@@ -4,12 +4,15 @@ import Footer from './components/Footer.jsx';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Works from './components/Works.jsx';
+import { SectionsProvider } from './providers/SectionsContext.jsx';
 
 const App = () => 
 {
   return (
     <div id="app">
-      <Navbar/>
+      <SectionsProvider>
+        <Navbar/>
+      </SectionsProvider>
       <Home/>
       <Works/>
       <Contact/>

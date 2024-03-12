@@ -2,7 +2,7 @@ import { useState } from "react";
 import Menu from "./Menu";
 import MenuButton from "./MenuButton";
 
-const MobileMenu = ({currentSection}) =>
+const MobileMenu = () =>
 {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const MobileMenu = ({currentSection}) =>
     return (
         <>
             <MenuButton handle={handleMenu} isOpen={isOpen}/>
-            <Menu isOpen={isOpen} currentSection={currentSection}/>
+            <Menu isOpen={isOpen}/>
         </>
     );
 }

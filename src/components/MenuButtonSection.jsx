@@ -1,8 +1,11 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { useSections } from "../hooks/useSections.js";
 
-export const MenuButtonSection = ({icon, section, currentSection}) =>
+export const MenuButtonSection = ({icon, section}) =>
 {
+    const { currentSection } = useSections();
+
     const variantBg = 
     {
         select:{

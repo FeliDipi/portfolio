@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const staggerMenuItems = stagger(0.1, {startDelay:0.15});
 
-const Menu = ({isOpen, currentSection}) =>
+const Menu = ({isOpen}) =>
 {
     const [scope, animate] = useAnimate();
 
@@ -27,9 +27,9 @@ const Menu = ({isOpen, currentSection}) =>
             className="mobile-menu center"
             ref={scope}
         >
-            <MenuButtonSection icon="ri:user-fill" section="home" currentSection={currentSection}/>
-            <MenuButtonSection icon="ic:sharp-work" section="works" currentSection={currentSection}/>
-            <MenuButtonSection icon="ion:mail" section="contact" currentSection={currentSection}/>
+            <MenuButtonSection icon="ri:user-fill" section="home"/>
+            <MenuButtonSection icon="ic:sharp-work" section="works"/>
+            <MenuButtonSection icon="ion:mail" section="contact"/>
         </motion.div>
     );
 }
