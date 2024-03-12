@@ -1,16 +1,18 @@
-import { works } from "../data/works.json";
 import Gallery from "./Gallery.jsx";
 import WorkItem from "./WorkItem.jsx";
 import WorkInfo from "./WorkInfo.jsx";
+import { useGallery } from "../hooks/useGallery.js";
 
 const Works = () =>
 {
+    const { currentIndex, items } = useGallery();
+
     return (
         <section id="works" className="center">
-            <WorkInfo work={works[0]}/>
-            <Gallery items={works}>
+            <WorkInfo work={items[currentIndex]} />
+            <Gallery items={items}>
                 {
-                    works.map(work=>(<WorkItem key={work.id} data={work}/>))
+                    items.map(item=>(<WorkItem key={item.id} data={item}/>))
                 }
             </Gallery>
             <div className="bg work-bg center">

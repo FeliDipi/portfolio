@@ -1,27 +1,63 @@
 import { Icon } from "@iconify/react";
-import { useDate } from "../hooks/useDate";
+import { useDate } from "../hooks/useDate.js";
+
+import AnimatedText from "./AnimatedText.jsx";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const WorkInfo = ({work}) =>
 {
     const {distance} = useDate(work.date);
+    const controls = useAnimation();
 
     const position = work.position;
     const name = work.name;
     const logo = `/src/assets/images/${ work.enterprise.logo}`;
     const tecnologies = work.tecnologies;
+
+    const variants =
+    {
+        visible:
+        {
+            opacity:1,
+            y:0
+        },
+        hidden:
+        {
+            opacity:0,
+            y:5
+        }
+    }
+
+    useEffect(()=>
+    {
+        const animation = async () =>
+        {
+            await controls.start("hidden");
+            controls.start("visible");
+        }
+
+        animation();
+    },[work])
     
     return (
         <div className="works-info center">
-            <p className="work-info-header">{`${distance} - ${position}`}</p>
-            <p className="work-info-title">{name}</p>
-            <div className="work-info-footer center">
+            <AnimatedText className="work-info-header" text={`${distance} - ${position}`} />
+            <AnimatedText className="work-info-title" text={name} />
+            <motion.div
+                initial="visible"
+                animate={controls}
+                variants={variants}
+                transition={{duration:0.25}}
+                className="work-info-footer center"
+            >
                 <img className="work-info-logo" src={logo}></img>
                 <div className="work-info-tecnologies center">
                     {
                         tecnologies.map((icon, idx)=>(<Icon className="work-info-icon" key={idx} icon={icon}/>))
                     }
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

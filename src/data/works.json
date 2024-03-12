@@ -28,14 +28,14 @@
         },
         {
             "id":1,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 0",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg",
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2021-01-05",
             "duration":"8 month",
             "enterprise":
             {
@@ -52,13 +52,13 @@
         },
         {
             "id":2,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 1",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2020-01-05",
             "duration":"8 month",
             "enterprise":
             {
@@ -68,43 +68,45 @@
             "position":"Unity 3D Developer",
             "tecnologies":
             [
-                "devicon-plain:csharp",
-                "mdi:unity"
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
             ],
             "link":"https://www.youtube.com/watch?v=hrEKV307eac"
         },
         {
             "id":3,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 2",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2024-01-05",
             "duration":"8 month",
             "enterprise":
             {
                 "logo":"tuxdi.png",
                 "link":"https://tuxdi.com/es/inicio/"
             },
-            "position":"Unity 3D Developer",
+            "position":"Unity 3D Developer 3",
             "tecnologies":
             [
-                "devicon-plain:csharp",
-                "mdi:unity"
+                "mdi:react",
+                "akar-icons:javascript-fill",
+                "simple-icons:vite"
             ],
             "link":"https://www.youtube.com/watch?v=hrEKV307eac"
         },
         {
             "id":4,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 4",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2024-03-05",
             "duration":"8 month",
             "enterprise":
             {
@@ -121,13 +123,13 @@
         },
         {
             "id":5,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 5",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2023-01-05",
             "duration":"8 month",
             "enterprise":
             {
@@ -144,13 +146,13 @@
         },
         {
             "id":6,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 6",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2022-01-05",
             "duration":"8 month",
             "enterprise":
             {
@@ -167,13 +169,13 @@
         },
         {
             "id":7,
-            "name":"Novathena Enviorement",
+            "name":"Novathena Enviorement 7",
             "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
             "gallery": 
             [
                 "perfil.jpg"
             ],
-            "date":"27/02/99",
+            "date":"2010-01-05",
             "duration":"8 month",
             "enterprise":
             {

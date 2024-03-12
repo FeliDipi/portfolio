@@ -25,9 +25,11 @@ const AnimatedText = ({className, text, repeatDelay, preHandle, postHandle }) =>
     useEffect(() => {
         let timeout;
         
-        const show = () => 
+        const show = async () => 
         {
+            if(!repeatDelay) await controls.start("hidden");
             controls.start("visible");
+
             if(repeatDelay)
             {
                 timeout = setTimeout(async () =>

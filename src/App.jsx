@@ -4,7 +4,10 @@ import Footer from './components/Footer.jsx';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import Works from './components/Works.jsx';
+import { GalleryProvider } from './providers/GalleryContext.jsx';
 import { SectionsProvider } from './providers/SectionsContext.jsx';
+
+import { works } from "./data/works.json";
 
 const App = () => 
 {
@@ -14,7 +17,9 @@ const App = () =>
         <Navbar/>
       </SectionsProvider>
       <Home/>
-      <Works/>
+      <GalleryProvider items={works}>
+        <Works/>
+      </GalleryProvider>
       <Contact/>
       <Footer/>
     </div>
