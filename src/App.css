@@ -36,6 +36,7 @@
   --font-title: clamp(2.125rem,1vw,2.5rem);
   --font-subtitle: clamp(1.25rem,1vw,1.5rem);
   --font-p: clamp(1.125rem,1vw,1.25rem);
+  --font-small: clamp(0.9rem,1vw,1rem);
 }
 
 #root
@@ -400,6 +401,7 @@ section
   width: 100vw;
   padding: 2rem;
   
+  gap:2.5rem;
   z-index: 1;
 }
 
@@ -430,10 +432,40 @@ section
 
 .dots-content
 {
-  width: 100%;
-  height: 30px;
+  position: relative;
 
+  width: 75%;
+  height: 50px;
+}
+
+.dots-bg
+{
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--gradient-color-4);
+
+  transform: scale(1.1);
+}
+
+.dots-slide
+{
+  background-color: var(--gradient-color-2);
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotateZ(5deg);
+}
+
+.dots-view
+{
   gap: 1rem;
+
+  width: fit-content;
+  height: 100%;
 }
 
 .dot
@@ -442,6 +474,9 @@ section
   height: 15px;
 
   border: none;
+  box-shadow: var(--shadow-0);
+
+  transform: rotateZ(20deg);
 
   transition: 0.25s all ease-in-out;
 }
@@ -449,15 +484,15 @@ section
 .dot-selected
 {
   border-radius: 100%;
-  background-color: var(--color-1);
+  transform: scale(1.5);
 
-  transform: scale(1.25);
+  background-color: var(--gradient-color-3);
 }
 
 .dot-unselected
 {
   border-radius: 0%;
-  background-color: var(--color-3);
+  background-color: var(--color-1);
 }
 
 /* Works */
@@ -520,4 +555,221 @@ section
   bottom: 0%;
 
   transform: scaleX(-1);
+}
+
+.works-info
+{
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.work-info-header
+{
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--font-small);
+
+  color: var(--color-1);
+}
+
+.work-info-title
+{
+  font-weight: 600;
+  font-size: var(--font-subtitle);
+
+  color: var(--color-0);
+}
+
+.work-info-footer
+{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.work-info-tecnologies
+{
+  gap: 0.5rem;
+}
+
+.work-info-icon
+{
+  width: 25px;
+  height: 25px;
+
+  color: var(--color-0);
+}
+
+/* Contact */
+
+#contact
+{
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contact-bg
+{
+  height: fit-content;
+}
+
+.contact-say-hello
+{
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.contact-say-hello-text
+{
+  font-size: var(--font-subtitle);
+  font-weight: 700;
+
+  color: var(--gradient-color-2);
+}
+
+.contact-say-hello-icon
+{
+  width: 20px;
+  height: 20px;
+
+  transform: rotateZ(30deg);
+
+  color: var(--gradient-color-2);
+}
+
+.contact-form
+{
+  width: 100%;
+
+  gap:2rem;
+  padding: 0rem 2rem 2rem 2rem;
+  flex-direction: column;
+}
+
+.contact-form-article
+{
+  width: 100%;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.contact-form-title
+{
+  width: 100%;
+
+  font-size: var(--font-p);
+  font-weight: 600;
+
+  color: var(--gradient-color-2);
+}
+
+.colored
+{
+  font-weight: 700;
+
+  color: var(--color-3);
+}
+
+.contact-form-input-content
+{
+  position: relative;
+
+  width: 100%;
+  height: 40px;
+}
+
+.textarea
+{
+  height: 140px;
+}
+
+.contact-form-input-bg
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-2);
+
+  transform: rotateZ(-5deg) scale(0.95);
+}
+
+.contact-form-input
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0.5rem;
+
+  background-color: var(--color-1);
+
+  font-style: normal;
+  font-weight: 600;
+
+  color: var(--gradient-color-2);
+
+  resize: none;
+}
+
+.contact-form-input::placeholder
+{
+  font-style: italic;
+  font-weight: 400;
+
+  color: var(--gradient-color-2);
+}
+
+.contact-form-input:focus
+{
+  border-radius: 0;
+  outline: 2px solid var(--gradient-color-2);
+}
+
+.form-submit-content
+{
+  width: 100%;
+  flex-direction: column;
+
+  gap:2rem;
+}
+
+.form-contact
+{
+  flex-direction: column;
+}
+
+.form-contact-title
+{
+  font-size: var(--font-p);
+  font-weight: 700;
+
+  color: var(--gradient-color-2);
+}
+
+.form-contact-mail
+{
+  font-size: var(--font-p);
+  font-weight: 500;
+
+  color: var(--gradient-color-2);
+}
+
+/* Footer */
+
+.footer
+{
+  width: 100%;
+  height: 50px;
+
+  background-color: var(--gradient-color-2);
+}
+
+.footer p
+{
+  font-size: var(--font-small);
+  font-weight: 300;
+
+  color: var(--color-1);
 }

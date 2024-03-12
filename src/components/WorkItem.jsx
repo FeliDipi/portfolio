@@ -6,7 +6,7 @@ const WorkItem = ({data}) => {
 
   return (
     <div className="gallery-item work-item center">
-      <img src={gallery[0]} />
+      <img src={`src/assets/images/${gallery[0]}`} />
       <div className="work-item-gradient"></div>
       <div className="work-item-expand center">
         <p className="work-item-expand-text">see more</p>
