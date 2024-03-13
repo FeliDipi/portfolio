@@ -1,4 +1,4 @@
-const FormInput = ({title, type, placeholder, isTextArea = false}) =>
+const FormInput = ({title, type, placeholder, validity, isTextArea = false}) =>
 {
     const style = !isTextArea?"contact-form-input-content":"contact-form-input-content textarea";
 
@@ -9,8 +9,8 @@ const FormInput = ({title, type, placeholder, isTextArea = false}) =>
                 <div className="contact-form-input-bg"></div>
                 {
                     !isTextArea?
-                        <input className="contact-form-input" type={type} placeholder={placeholder} />:
-                        <textarea className="contact-form-input" type={type} placeholder={placeholder} />
+                        <input id={title} onChange={validity} className="contact-form-input" type={type} placeholder={placeholder} />:
+                        <textarea id={title} onChange={validity} className="contact-form-input" type={type} placeholder={placeholder} />
                 }
                 
             </div>

@@ -609,19 +609,23 @@ section
   gap: 0.5rem;
 }
 
-.work-item-expand-text
+.work-item-expand-bg
 {
-  font-size: var(--font-p);
-  font-style: italic;
-  font-weight: 300;
+  width: 35px;
+  height: 35px;
 
-  color: var(--color-0);
+  background-color: var(--gradient-color-4);
+
+  transform: rotate(15deg);
 }
 
 .work-item-expand-icon
 {
-  width: 30px;
-  height: 30px;
+  pointer-events: none;
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
 
   color: var(--color-1);
 }
@@ -695,7 +699,7 @@ section
 
 .work-extended
 {
-  position: relative;
+  position: absolute;
 
   flex-direction: column;
 

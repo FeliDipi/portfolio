@@ -1,27 +1,17 @@
-import { useState } from "react";
 import WorkPreview from "./WorkPreview.jsx";
 import WorkExtended from "./WorkExtended.jsx";
+import { useWorks } from "../hooks/useWorks.js";
 
 const Works = () =>
 {
-    const [workSelected, setWorkSelected] = useState(null);
-    const [extended, setIsExtended] = useState(false);
-
-    const handleSelect = (work) =>
-    {
-        setWorkSelected(work);
-        setIsExtended(true);
-    }
-
-    const handleClose = () =>
-    {
-        setIsExtended(false);
-    }
+    const {workSelected, handleSelect, handleClose} = useWorks();
 
     return (
         <section id="works" className="center">
             {
-                extended?<WorkExtended work={workSelected} close={handleClose}/>:<WorkPreview selectHandle={handleSelect}/>
+                workSelected?
+                    <WorkExtended work={workSelected} close={handleClose}/>:
+                    <WorkPreview selectHandle={handleSelect}/>
             }
             <div className="bg work-bg center">
                 <div className="bg-border-back"></div>

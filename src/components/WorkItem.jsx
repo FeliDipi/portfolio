@@ -2,19 +2,41 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
 const WorkItem = ({data, selectHandle}) => {
+
+  const variants = {
+    open:{
+        backgroundColor:"#23B684",
+        rotate:"0deg"
+    },
+    close:
+    {
+        backgroundColor:"#0F595E",
+        rotate:"15deg"
+    },
+    tap:
+    {
+        scale:0.95
+    }
+  }
+
   return (
-    <motion.div
-      whileTap={{scale:0.97}} 
+    <div
       className="gallery-item work-item center"
-      onClick={()=>selectHandle(data)}
     >
       <img className="work-item-img" src={`src/assets/images/${data.gallery[0]}`} />
       <div className="work-item-gradient"></div>
       <div className="work-item-expand center">
-        <p className="work-item-expand-text">see more</p>
+        <motion.div 
+          initial={"close"}
+          whileTap={"tap"}
+          whileHover={"open"}
+          variants={variants}
+          onClick={()=>selectHandle(data)}
+          className="work-item-expand-bg"
+        ></motion.div>
         <Icon className="work-item-expand-icon" icon="material-symbols:more" />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

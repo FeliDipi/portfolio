@@ -13,7 +13,7 @@ const WorkExtended = ({work, close}) =>
         },
         close:
         {
-            backgroundColor:"#032E46",
+            backgroundColor:"#0F595E",
             rotate:"15deg"
         },
         tap:
@@ -64,6 +64,7 @@ const WorkExtended = ({work, close}) =>
                             className="work-extended-enterprise-logo-content center" 
                             href={work.enterprise.link} 
                             target="_blank"
+                            rel="noopener noreferrer"
                             initial={"close"}
                             whileTap={"tap"}
                             whileHover={"open"}
@@ -81,7 +82,7 @@ const WorkExtended = ({work, close}) =>
                     </div>
                     <div className="work-extended-link-content center">
                         <Icon className="work-extended-link-icon" icon="ph:link-bold" />
-                        <a className="work-extended-link" href={work.link} target="_blank">{work.link}</a>
+                        <a className="work-extended-link" href={work.link} target="_blank" rel="noopener noreferrer">{work.link}</a>
                     </div>
                     <p className="work-extended-resume">
                         <span className="bold">Resume:</span><br/>
