@@ -2,53 +2,128 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const FormSubmit = () =>
+const DELAY_ON_COMPLETE = 2000;
+
+const FormSubmit = ({state, onFinishState}) =>
 {
-    const states = 
+    const [timeOut, setTimeOut] = useState(null);
+
+    const variant =
     {
         normal:
         {
-            background:"#032E46",
-            backgroundBack:"#0F595E",
-            text:"Send",
-            icon:"material-symbols:send"
-        },
-        error:
-        {
-            background:"#E74C3C",
-            backgroundBack:"#C0392B",
-            text:"Ups",
-            icon:"material-symbols:send"
+            rotate:0
         },
         loading:
         {
-            background:"#23B684",
-            backgroundBack:"#0F595E",
-            icon:"eos-icons:bubble-loading"
+            scale:0.9,
+            opacity:0.75,
+            rotate:-8,
+            pointerEvents:"none"
+        },
+        error:
+        {
+            rotate:[0,-5,5,0],
+            pointerEvents:"none"
         },
         success:
         {
-            background:"#23B684",
-            backgroundBack:"#0F595E",
+            rotate:[0,-5,5,0],
+            scale:[1,1.1,1],
+            pointerEvents:"none"
+        }
+    }
+
+    const variantButton =
+    {
+        normal:
+        {
+            backgroundColor:"#032E46"
+        },
+        loading:
+        {
+            backgroundColor:"#23B684"
+        },
+        error:
+        {
+            backgroundColor:"#E74C3C"
+        },
+        success:
+        {
+            backgroundColor:"#23B684"
+        }
+    };
+
+    const variantBg =
+    {
+        normal:
+        {
+            backgroundColor:"#0F595E"
+        },
+        loading:
+        {
+            backgroundColor:"#0F595E"
+        },
+        error:
+        {
+            backgroundColor:"#C0392B"
+        },
+        success:
+        {
+            backgroundColor:"#0F595E"
+        }
+    };
+
+    const content =
+    {
+        normal:
+        {
+            text:"Send",
+            icon:"material-symbols:send",
+        },
+        loading:
+        {
+            text:"Sending...",
+            icon:"line-md:loading-alt-loop",
+        },
+        error:
+        {
+            text:"Ups",
+            icon:"material-symbols:send"
+        },
+        success:
+        {
             text:"Thanks",
             icon:"fa6-solid:hand"
         }
     }
 
-    const state = states["normal"];
+    const handleOnCompleteAnimation = () =>
+    {
+        if(timeOut || state==="loading") return;
+
+        const newTimeOut = setTimeout(() => {
+            onFinishState("normal");
+            setTimeOut(null);
+          }, DELAY_ON_COMPLETE); 
+
+        setTimeOut(newTimeOut);
+    }
 
     return (
-        <motion.div 
+        <motion.div
             className="cv center"
             whileHover={{rotate:-8}}
             whileTap={{scale:0.95}}
+            animate={state}
+            transition={{duration:0.25}}
+            onAnimationComplete={handleOnCompleteAnimation}
+            variants={variant}
         >
-            <motion.div animate={{backgroundColor:state.backgroundBack}} className="cv-back"></motion.div>
-            <motion.button animate={{backgroundColor:state.background}} type="submit" className="cv-button center" download={"Nicolás Felipe Dipierro - CV"}>
-                {
-                    state.text && <p className="cv-text">{state.text}</p>
-                }
-                <Icon className="cv-icon" icon={state.icon}/>
+            <motion.div variants={variantBg} className="cv-back"></motion.div>
+            <motion.button variants={variantButton} type="submit" className="cv-button center" download={"Nicolás Felipe Dipierro - CV"}>
+                <p className="cv-text">{content[state].text}</p>
+                <Icon className="cv-icon" icon={content[state].icon}/>
             </motion.button>
         </motion.div>
     );

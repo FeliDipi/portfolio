@@ -1,40 +1,11 @@
 import { Icon } from "@iconify/react";
 import FormInput from "./FormInput.jsx";
 import FormSubmit from "./FormSubmit.jsx";
-import { useState } from "react";
+import { useEmail } from "../hooks/useEmail.js";
 
 const Contact = () =>
 {
-    const [validity,setValidity] = useState({Name:false,Mail:false,Message:false});
-    const [form,setForm] = useState(null);
-
-    const handleValidity = (e) =>
-    {
-        const newValidity = 
-        {
-            ...validity,
-            [e.target.id]:e.target.validity.valid
-        }
-
-        setValidity(newValidity);
-    }
-
-    const handleSubmit = (e) =>
-    {
-        e.preventDefault();
-
-        const inputs = e.target;
-
-        const newForm = {
-            name:inputs[0].value,
-            mail:inputs[1].value,
-            message:inputs[2].value
-        }
-
-        setForm(newForm);
-
-        console.log(newForm);
-    }
+    const { state, setState, handleSubmit } = useEmail();
 
     return (
         <section id="contact" className="center">
@@ -47,15 +18,15 @@ const Contact = () =>
                         <Icon className="contact-say-hello-icon" icon="fa6-solid:hand"/>
                     </div>
                     <form onSubmit={handleSubmit} className="contact-form center" action="submit">
-                        <FormInput title="Name" type="text" placeholder="your name..." validity={handleValidity}/>
-                        <FormInput title="Mail" type="email" placeholder="example@mail.com..." validity={handleValidity}/>
-                        <FormInput title="Message" type="textarea" placeholder="your message..." validity={handleValidity} isTextArea/>
+                        <FormInput title="Name" type="text" placeholder="your name..."/>
+                        <FormInput title="Email" type="email" placeholder="example@mail.com..."/>
+                        <FormInput title="Message" type="textarea" placeholder="your message..." isTextArea/>
                         
                         <div className="form-submit-content center">
-                            <FormSubmit/>
+                            <FormSubmit state={state} onFinishState={setState}/>
                             <div className="form-contact center">
                                 <p className="form-contact-title">Contact</p>
-                                <p className="form-contact-mail">nicolasfelipedipierro@gmail.com</p>
+                                <p className="form-contact-mail">nicolasdipierrocontacto@gmail.com</p>
                             </div>
                         </div>
                         
