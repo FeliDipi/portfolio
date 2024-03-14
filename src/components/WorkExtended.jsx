@@ -58,7 +58,9 @@ const WorkExtended = ({work, close}) =>
                 </motion.div>
                 <Icon className="work-extended-close-btn-icon" icon="ion:open"/>
             </div>
-            <img className="work-extended-gallery" src={images[imageKey]}/>
+            <div className="work-extended-gallery-content center">
+                <img className="work-extended-gallery" src={images[imageKey]}/>
+            </div>
             <div className="bg  work-extended-bg">
                 <div className="bg-border-top"></div>
                 <div className="bg-content work-extended-bg-content center">

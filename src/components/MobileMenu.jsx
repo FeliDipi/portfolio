@@ -12,10 +12,10 @@ const MobileMenu = () =>
     }
 
     return (
-        <>
+        <div className="navbar-mobile center">
             <MenuButton handle={handleMenu} isOpen={isOpen}/>
             <Menu isOpen={isOpen}/>
-        </>
+        </div>
     );
 }
 
