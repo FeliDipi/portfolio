@@ -2,10 +2,11 @@ import { Icon } from "@iconify/react";
 import FormInput from "./FormInput.jsx";
 import FormSubmit from "./FormSubmit.jsx";
 import { useEmail } from "../../hooks/useEmail.js";
+import FormContactInfo from "./FormContactInfo.jsx";
 
 const Contact = () =>
 {
-    const { state, setState, handleSubmit } = useEmail();
+    const { state, handleSubmit } = useEmail();
 
     return (
         <section id="contact" className="center">
@@ -21,15 +22,10 @@ const Contact = () =>
                         <FormInput title="Name" type="text" placeholder="your name..."/>
                         <FormInput title="Email" type="email" placeholder="example@mail.com..."/>
                         <FormInput title="Message" type="textarea" placeholder="your message..." isTextArea/>
-                        
                         <div className="form-submit-content center">
-                            <FormSubmit state={state} onFinishState={setState}/>
-                            <div className="form-contact center">
-                                <p className="form-contact-title">Contact</p>
-                                <p className="form-contact-mail">nicolasdipierrocontacto@gmail.com</p>
-                            </div>
-                        </div>
-                        
+                            <FormSubmit state={state}/>
+                            <FormContactInfo/>
+                        </div>                   
                     </form>
                 </div>
             </div>

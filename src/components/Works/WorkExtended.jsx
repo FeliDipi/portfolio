@@ -26,7 +26,8 @@ const WorkExtended = ({work, close}) =>
 
     const variantsEnterprise = {
         open:{
-            backgroundColor:"#043D5D"
+            backgroundColor:"#043D5D",
+            scale:0.95
         },
         close:
         {

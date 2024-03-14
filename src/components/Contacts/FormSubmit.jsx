@@ -1,24 +1,23 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-const DELAY_ON_COMPLETE = 2000;
-
-const FormSubmit = ({state, onFinishState}) =>
+const FormSubmit = ({state}) =>
 {
-    const [timeOut, setTimeOut] = useState(null);
-
     const variant =
     {
         hover:
         {
             rotate:-8
         },
+        tap:
+        {
+            scale:0.95
+        },
         normal:
         {
             rotate:0
         },
-        loading:
+        load:
         {
             scale:0.9,
             opacity:0.75,
@@ -30,7 +29,7 @@ const FormSubmit = ({state, onFinishState}) =>
             rotate:[0,-5,5,0],
             pointerEvents:"none"
         },
-        success:
+        ok:
         {
             rotate:[0,-5,5,0],
             scale:[1,1.1,1],
@@ -48,7 +47,7 @@ const FormSubmit = ({state, onFinishState}) =>
         {
             backgroundColor:"#032E46"
         },
-        loading:
+        load:
         {
             backgroundColor:"#23B684"
         },
@@ -56,7 +55,7 @@ const FormSubmit = ({state, onFinishState}) =>
         {
             backgroundColor:"#E74C3C"
         },
-        success:
+        ok:
         {
             backgroundColor:"#23B684"
         }
@@ -72,7 +71,7 @@ const FormSubmit = ({state, onFinishState}) =>
         {
             backgroundColor:"#0F595E"
         },
-        loading:
+        load:
         {
             backgroundColor:"#0F595E"
         },
@@ -80,7 +79,7 @@ const FormSubmit = ({state, onFinishState}) =>
         {
             backgroundColor:"#C0392B"
         },
-        success:
+        ok:
         {
             backgroundColor:"#0F595E"
         }
@@ -93,7 +92,7 @@ const FormSubmit = ({state, onFinishState}) =>
             text:"Send",
             icon:"material-symbols:send",
         },
-        loading:
+        load:
         {
             text:"Sending...",
             icon:"line-md:loading-alt-loop",
@@ -103,33 +102,20 @@ const FormSubmit = ({state, onFinishState}) =>
             text:"Ups",
             icon:"material-symbols:send"
         },
-        success:
+        ok:
         {
             text:"Thanks",
             icon:"fa6-solid:hand"
         }
     }
 
-    const handleOnCompleteAnimation = () =>
-    {
-        if(timeOut || state==="loading") return;
-
-        const newTimeOut = setTimeout(() => {
-            onFinishState("normal");
-            setTimeOut(null);
-          }, DELAY_ON_COMPLETE); 
-
-        setTimeOut(newTimeOut);
-    }
-
     return (
         <motion.div
             className="cv contact-submit-btn center"
             whileHover={"hover"}
-            whileTap={{scale:0.95}}
+            whileTap={"tap"}
             animate={state}
             transition={{duration:0.25}}
-            onAnimationComplete={handleOnCompleteAnimation}
             variants={variant}
         >
             <motion.div variants={variantBg} className="cv-back"></motion.div>

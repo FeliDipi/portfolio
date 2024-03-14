@@ -1,9 +1,20 @@
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
+import { SUBMIT_STATE } from '../consts/submitStates.js';
+
+const DELAY_ON_COMPLETE = 2000;
 
 export const useEmail = () =>
 {
-    const [state, setState] = useState("normal");
+    const [state, setState] = useState(SUBMIT_STATE.NORMAL);
+
+    const resetState = () =>
+    {
+        setTimeout(() => 
+        {
+            setState(SUBMIT_STATE.NORMAL);
+        }, DELAY_ON_COMPLETE); 
+    }
 
     const validParams = (params) =>
     {
@@ -23,19 +34,19 @@ export const useEmail = () =>
 
     const sendEmail = async (params) =>
     {
-        setState("loading");
+        setState(SUBMIT_STATE.LOAD);
 
         await emailjs.send(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID, params)
-        .then(res=>
-        {
-            setState("success");
-        })
-        .catch(res=>{
-            setState("error");
-        });
+                    .then(res=>
+                    {
+                        setState(SUBMIT_STATE.OK);
+                    })
+                    .catch(res=>{
+                        setState(SUBMIT_STATE.ERROR);
+                    });
     }
 
-    const handleSubmit = (e) =>
+    const handleSubmit = async (e) =>
     {
         e.preventDefault();  
 
@@ -45,16 +56,18 @@ export const useEmail = () =>
         
         if(!validParams(params)) 
         {
-            setState("error");
-            return;
+            setState(SUBMIT_STATE.ERROR);
         }
-        
-        sendEmail(params);
+        else
+        {
+            await sendEmail(params);
+        }
+
+        resetState();
     }
 
     return {
         state,
-        setState,
         handleSubmit
     }
 }

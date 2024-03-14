@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Dots = ({ items, currentIndex, setIndex }) => 
 {
   return (
@@ -7,11 +9,12 @@ const Dots = ({ items, currentIndex, setIndex }) =>
         <div className="dots-view center">
           {items.map((_, idx) => {
             return (
-              <button
+              <motion.button
                 key={idx}
                 onClick={() => setIndex(idx)}
+                whileHover={{opacity:0.75}}
                 className={`dot ${idx === currentIndex ? "dot-selected":"dot-unselected"}`}
-              />
+              ></motion.button>
             );
           })}
         </div>
