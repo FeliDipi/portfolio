@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import FormInput from "./FormInput.jsx";
 import FormSubmit from "./FormSubmit.jsx";
-import { useEmail } from "../hooks/useEmail.js";
+import { useEmail } from "../../hooks/useEmail.js";
 
 const Contact = () =>
 {

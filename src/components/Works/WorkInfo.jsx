@@ -1,12 +1,12 @@
 import { Icon } from "@iconify/react";
-import { useDate } from "../hooks/useDate.js";
+import { useDate } from "../../hooks/useDate.js";
 
-import AnimatedText from "./AnimatedText.jsx";
+import AnimatedText from "../AnimatedText.jsx";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useGallery } from "../hooks/useGallery.js";
+import { useGallery } from "../../hooks/useGallery.js";
 
-import images from "../hooks/images.js";
+import images from "../../hooks/useImage.js";
 
 const WorkInfo = () =>
 {

@@ -1,13 +1,17 @@
 import { Icon } from "@iconify/react";
-import perfil from "../assets/images/perfil.jpg";
+
 import CVButton from "./CVButton.jsx";
 import HomeRandomInfo from "./HomeRandomInfo.jsx";
 
+import images from "../../hooks/useImage.js";
+
 const HomeInfo = () =>
 {
+    const perfilKey = `/src/assets/images/perfil.jpg`;
+
     return (
         <div className="home-content center">
-            <img className="home-perfil" src={perfil} alt="Nicolás Felipe Dipierro" />
+            <img className="home-perfil" src={images[perfilKey]} alt="Nicolás Felipe Dipierro" />
             <div className="bg center">
                 <div className="bg-border-back"></div>
                 <div className="bg-border-top"></div>

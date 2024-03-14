@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useDate } from "../hooks/useDate.js";
+import { useDate } from "../../hooks/useDate.js";
 
-import images from "../hooks/images.js";
+import images from "../../hooks/useImage.js";
 
 const WorkExtended = ({work, close}) =>
 {

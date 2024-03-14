@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
-import { random } from "../data/random.json";
+import { random } from "../../data/random.json";
 import { useState } from "react";
 import { motion , useAnimation } from "framer-motion";
-import AnimatedText from "./AnimatedText.jsx";
+import AnimatedText from "../AnimatedText.jsx";
 
 const HomeRandomInfo = () =>
 {

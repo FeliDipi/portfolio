@@ -1,6 +1,6 @@
 import WorkPreview from "./WorkPreview.jsx";
 import WorkExtended from "./WorkExtended.jsx";
-import { useWorks } from "../hooks/useWorks.js";
+import { useWorks } from "../../hooks/useWorks.js";
 import { AnimatePresence } from "framer-motion";
 
 const Works = () =>

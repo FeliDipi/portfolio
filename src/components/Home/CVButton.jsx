@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import cv from "../assets/documents/cv.pdf";
+import cv from "../../assets/documents/cv.pdf";
 
 const CVButton = () =>
 {

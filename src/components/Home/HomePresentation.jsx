@@ -1,4 +1,4 @@
-import AnimatedText from "./AnimatedText";
+import AnimatedText from "../AnimatedText";
 
 const HomePresentation = () =>
 {

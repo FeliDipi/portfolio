@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useSections } from "../hooks/useSections.js";
+import { useSections } from "../../hooks/useSections.js";
 
 export const MenuButtonSection = ({icon, section}) =>
 {

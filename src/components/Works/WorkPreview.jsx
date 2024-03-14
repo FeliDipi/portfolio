@@ -1,7 +1,7 @@
-import Gallery from "./Gallery.jsx";
+import Gallery from "../Gallery.jsx";
 import WorkItem from "./WorkItem.jsx";
 import WorkInfo from "./WorkInfo.jsx";
-import { useGallery } from "../hooks/useGallery.js";
+import { useGallery } from "../../hooks/useGallery.js";
 
 const WorkPreview = ({selectHandle}) =>
 {
