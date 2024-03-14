@@ -10,6 +10,10 @@ const FormSubmit = ({state, onFinishState}) =>
 
     const variant =
     {
+        hover:
+        {
+            rotate:-8
+        },
         normal:
         {
             rotate:0
@@ -36,6 +40,10 @@ const FormSubmit = ({state, onFinishState}) =>
 
     const variantButton =
     {
+        hover:
+        {
+            backgroundColor:"#23B684"
+        },
         normal:
         {
             backgroundColor:"#032E46"
@@ -56,6 +64,10 @@ const FormSubmit = ({state, onFinishState}) =>
 
     const variantBg =
     {
+        hover:
+        {
+            backgroundColor:"#0F595E"
+        },
         normal:
         {
             backgroundColor:"#0F595E"
@@ -112,8 +124,8 @@ const FormSubmit = ({state, onFinishState}) =>
 
     return (
         <motion.div
-            className="cv center"
-            whileHover={{rotate:-8}}
+            className="cv contact-submit-btn center"
+            whileHover={"hover"}
             whileTap={{scale:0.95}}
             animate={state}
             transition={{duration:0.25}}

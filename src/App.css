@@ -481,6 +481,8 @@ section
 
 .cv-button
 {
+  cursor: pointer;
+
   position: absolute;
 
   width: 100%;
@@ -589,6 +591,8 @@ section
 
 .dot
 {
+  cursor: pointer;
+
   width: 15px;
   height: 15px;
 
@@ -645,6 +649,8 @@ section
 
 .work-item-expand
 {
+  cursor: pointer;
+
   position: absolute;
 
   bottom: 0%;
