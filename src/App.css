@@ -937,12 +937,13 @@ section
 
 .contact-form
 {
+  flex-direction: column;
+
   max-width: 700px;
   width: 100%;
-
+  
+  padding: 0.5rem;
   gap:2rem;
-  padding: 0rem 2rem 2rem 2rem;
-  flex-direction: column;
 }
 
 .contact-form-article

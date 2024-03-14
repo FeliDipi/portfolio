@@ -121,7 +121,7 @@ const FormSubmit = ({state, onFinishState}) =>
             variants={variant}
         >
             <motion.div variants={variantBg} className="cv-back"></motion.div>
-            <motion.button variants={variantButton} type="submit" className="cv-button center" download={"Nicolás Felipe Dipierro - CV"}>
+            <motion.button variants={variantButton} type="submit" className="cv-button center">
                 <p className="cv-text">{content[state].text}</p>
                 <Icon className="cv-icon" icon={content[state].icon}/>
             </motion.button>

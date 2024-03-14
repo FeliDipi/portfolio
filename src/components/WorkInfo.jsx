@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useGallery } from "../hooks/useGallery.js";
 
+import images from "../hooks/images.js";
+
 const WorkInfo = () =>
 {
     const { currentItem } = useGallery();
@@ -17,7 +19,7 @@ const WorkInfo = () =>
 
     const position = work.position;
     const name = work.name;
-    const logo = `/src/assets/images/${ work.enterprise.logo}`;
+    const logoKey = `/src/assets/images/${ work.enterprise.logo}`;
     const tecnologies = work.tecnologies;
 
     const variants =
@@ -56,7 +58,7 @@ const WorkInfo = () =>
                 transition={{duration:0.25}}
                 className="work-info-footer center"
             >
-                <img className="work-info-logo" src={logo}></img>
+                <img className="work-info-logo" src={images[logoKey]}></img>
                 <div className="work-info-tecnologies center">
                     {
                         tecnologies.map((icon, idx)=>(<Icon className="work-info-icon" key={idx} icon={icon}/>))

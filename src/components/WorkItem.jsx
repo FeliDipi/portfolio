@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import images from "../hooks/images.js";
 
 const WorkItem = ({data, selectHandle}) => {
-
   const variants = {
     open:{
         backgroundColor:"#23B684",
@@ -19,11 +19,13 @@ const WorkItem = ({data, selectHandle}) => {
     }
   }
 
+  const imageKey = `/src/assets/images/${data.gallery[0]}`;
+
   return (
     <div
       className="gallery-item work-item center"
     >
-      <img className="work-item-img" src={`src/assets/images/${data.gallery[0]}`} />
+      <img className="work-item-img" src={images[imageKey]} />
       <div className="work-item-gradient"></div>
       <div className="work-item-expand center">
         <motion.div 

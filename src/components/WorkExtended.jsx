@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useDate } from "../hooks/useDate";
+import { useDate } from "../hooks/useDate.js";
+
+import images from "../hooks/images.js";
 
 const WorkExtended = ({work, close}) =>
 {
@@ -36,6 +38,9 @@ const WorkExtended = ({work, close}) =>
         }
     }
 
+    const logoKey = `/src/assets/images/${ work.enterprise.logo}`;
+    const imageKey = `/src/assets/images/${ work.gallery[0] }`;
+
     return (
         <motion.div 
             className="work-extended center"
@@ -53,7 +58,7 @@ const WorkExtended = ({work, close}) =>
                 </motion.div>
                 <Icon className="work-extended-close-btn-icon" icon="ion:open"/>
             </div>
-            <img className="work-extended-gallery" src={`./src/assets/images/${work.gallery[0]}`}/>
+            <img className="work-extended-gallery" src={images[imageKey]}/>
             <div className="bg  work-extended-bg">
                 <div className="bg-border-top"></div>
                 <div className="bg-content work-extended-bg-content center">
@@ -70,7 +75,7 @@ const WorkExtended = ({work, close}) =>
                             whileHover={"open"}
                             variants={variantsEnterprise}
                         >
-                            <img className="work-extended-enterprise-logo" src={`./src/assets/images/${work.enterprise.logo}`}/>
+                            <img className="work-extended-enterprise-logo" src={images[logoKey]}/>
                         </motion.a>
                     </div>
                     <p className="work-extended-position"><span className="bold">Position:</span> {work.position}</p>
