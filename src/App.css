@@ -552,28 +552,14 @@ section
 
 .dots-content
 {
-  position: relative;
-
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   height: 50px;
 }
 
-.dots-bg
-{
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--gradient-color-4);
-
-  transform: scale(1.1);
-}
-
 .dots-slide
 {
-  background-color: var(--gradient-color-2);
-
-  position: absolute;
+  position: relative;
 
   width: 100%;
   height: 100%;
@@ -581,18 +567,38 @@ section
   transform: rotateZ(5deg);
 }
 
+.dots-bg
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--gradient-color-4);
+
+  z-index: -1;
+
+  transform: rotateZ(-5deg) scale(1.1);
+}
+
 .dots-view
 {
-  gap: 1rem;
+  background-color: var(--gradient-color-2);
 
-  width: fit-content;
+  gap:0.75rem;
+  padding: 1.5rem;
+
+  width: 100%;
   height: 100%;
+
+  overflow: hidden;
 }
 
 .dot
 {
   cursor: pointer;
 
+  min-width: 15px;
   width: 15px;
   height: 15px;
 
@@ -772,6 +778,8 @@ section
 
 .work-extended-gallery-content
 {
+  background-color: var(--gradient-color-2);
+
   max-width: 700px;
   width: 100%;
   height: 100%;
@@ -781,8 +789,8 @@ section
 
 .work-extended-gallery
 {
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .work-extended-bg
@@ -829,6 +837,7 @@ section
 .work-extended-enterprise-logo-content
 {
   background-color: var(--color-2);
+  box-shadow: var(--shadow-0);
 
   padding: 0.3rem;
 }
@@ -904,6 +913,8 @@ section
 
 .work-extended-resume
 {
+  width: 100%;
+
   font-size: var(--font-small);
   font-weight: 500;
   color: var(--gradient-color-2);
@@ -1150,12 +1161,21 @@ section
     display: flex;
   }
 
+  /* Gallery */
+
+  .dots-content
+  {
+    max-width: 500px;
+  }
+
   /* Works */
 
-  .work-item-img
+  .work-extended-gallery
   {
     width: 100%;
     height: auto;
+
+    aspect-ratio: 16/9;
   }
 
   /* Contact */

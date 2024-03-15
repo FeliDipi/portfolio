@@ -31,7 +31,7 @@ const WorkExtended = ({work, close}) =>
         },
         close:
         {
-            backgroundColor:"#032E46"
+            backgroundColor:"#0F595E"
         },
         tap:
         {
@@ -41,6 +41,8 @@ const WorkExtended = ({work, close}) =>
 
     const logoKey = `/src/assets/images/${ work.enterprise.logo}`;
     const imageKey = `/src/assets/images/${ work.gallery[0] }`;
+
+    const duration = work.duration === "current"?work.duration:`${work.duration} of duration`;
 
     return (
         <motion.div 
@@ -81,24 +83,26 @@ const WorkExtended = ({work, close}) =>
                             <img className="work-extended-enterprise-logo" src={images[logoKey]}/>
                         </motion.a>
                     </div>
-                    <p className="work-extended-position"><span className="bold">Position:</span> {work.position}</p>
+                    <p className="work-extended-position"><span className="bold">Position:</span> {`${work.status} - ${work.position}`}</p>
                     <div className="work-extended-tecnologies-content center">
                         <p className="work-extended-tecnologies-text">Tecnologies: </p>
                         {
                             work.tecnologies.map((icon, idx)=>(<Icon className="work-extended-tecnologies-icon" key={idx} icon={icon}/>))
                         }
                     </div>
-                    <div className="work-extended-link-content center">
-                        <Icon className="work-extended-link-icon" icon="ph:link-bold" />
-                        <a className="work-extended-link" href={work.link} target="_blank" rel="noopener noreferrer">{work.link}</a>
-                    </div>
+                    {
+                        work.link && <div className="work-extended-link-content center">
+                            <Icon className="work-extended-link-icon" icon="ph:link-bold" />
+                            <a className="work-extended-link" href={work.link} target="_blank" rel="noopener noreferrer">{work.link}</a>
+                        </div>
+                    }
                     <p className="work-extended-resume">
                         <span className="bold">Resume:</span><br/>
                         {
                             work.resume
                         }
                     </p>
-                    <p className="work-extended-date">{`${distance} - ${work.duration} of duration`}</p>
+                    <p className="work-extended-date">{`${distance} - ${duration}`}</p>
                 </div>
             </div>
         </motion.div>

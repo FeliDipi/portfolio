@@ -14,13 +14,15 @@ const WorkInfo = () =>
 
     const work = currentItem;
 
-    const {distance} = useDate(work.date);
     const controls = useAnimation();
-
-    const position = work.position;
+    const {distance} = useDate(work.date);
     const name = work.name;
+    const status = work.status;
+    const position = work.position;
     const logoKey = `/src/assets/images/${ work.enterprise.logo}`;
     const tecnologies = work.tecnologies;
+
+    const header = `${distance} - ${status} - ${position}`
 
     const variants =
     {
@@ -49,7 +51,7 @@ const WorkInfo = () =>
     
     return (
         <div className="works-info center">
-            <AnimatedText className="work-info-header" text={`${distance} - ${position}`} />
+            <AnimatedText className="work-info-header" text={header} />
             <AnimatedText className="work-info-title" text={name} />
             <motion.div
                 initial="visible"

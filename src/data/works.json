@@ -3,192 +3,376 @@
     [
         {
             "id":0,
-            "name":"Novathena Enviorement",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Novathena - 3D Environment",
+            "resume": "Work on building and optimizing simulated 3D environments in Unity, with Webgl support to be displayed in a browser. An incredible experience working and polishing optimization techniques to achieve a realistic result while maintaining fluidity in the browser.",
+            "gallery":
             [
-                "perfil.jpg",
-                "perfil.jpg",
-                "perfil.jpg"
+                "tuxdi_0.gif",
+                "tuxdi_1.png"
             ],
-            "date":"2022-01-05",
-            "duration":"8 month",
+            "date":"2022-12-20",
+            "duration":"6 month",
             "enterprise":
             {
                 "logo":"tuxdi.png",
                 "link":"https://tuxdi.com/es/inicio/"
             },
+            "status":"Junior-Advance",
             "position":"Unity 3D Developer",
             "tecnologies":
             [
                 "devicon-plain:csharp",
-                "mdi:unity"
+                "mdi:unity",
+                "flowbite:html-solid"
             ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+            "link":"https://novathena.ai/"
         },
         {
             "id":1,
-            "name":"Novathena Enviorement 0",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Alphaverse - Frontend",
+            "resume":"I have worked as a front end developer in Unity 3D, adding, polishing, refactoring and connecting with backend new and existing functionalities in the Alphaverse Metaverse. A great experience where I substantially improved my performance by following development methodologies, good programming practices and working as a team. I was fortunate to share a team with colleagues with much more experience and with the willingness and good will to share that experience.",
+            "gallery":
             [
-                "perfil.jpg",
-                "perfil.jpg"
+                "trick_0.png"
             ],
-            "date":"2021-01-05",
+            "date":"2023-11-24",
             "duration":"8 month",
             "enterprise":
             {
                 "logo":"trick.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "link":"http://www.trickgs.com/"
             },
+            "status":"Semi-Senior",
             "position":"Unity 3D Developer",
             "tecnologies":
             [
                 "devicon-plain:csharp",
                 "mdi:unity"
             ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+            "link":"https://home.alphaverse.com/"
         },
         {
             "id":2,
-            "name":"Novathena Enviorement 1",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Rocking over wheels",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_0.png",
+                "livemedia_1.png",
+                "livemedia_2.png"
             ],
-            "date":"2020-01-05",
-            "duration":"8 month",
+            "date":"2021-09-06",
+            "duration":"1 month",
             "enterprise":
             {
                 "logo":"livemedia.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "link":"https://livemedia.com.ar/"
             },
-            "position":"Unity 3D Developer",
+            "status":"Junior-Advance",
+            "position":"Front end Developer",
             "tecnologies":
             [
                 "akar-icons:javascript-fill",
                 "flowbite:html-solid",
                 "flowbite:css-solid"
-            ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+            ]
         },
         {
             "id":3,
-            "name":"Novathena Enviorement 2",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Piramid Mini Beats",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_20.png",
+                "livemedia_21.png",
+                "livemedia_22.png",
+                "livemedia_23.png",
+                "livemedia_24.png"
             ],
-            "date":"2024-01-05",
-            "duration":"8 month",
+            "date":"2021-10-2",
+            "duration":"1 month",
             "enterprise":
             {
-                "logo":"tuxdi.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
             },
-            "position":"Unity 3D Developer 3",
+            "status":"Junior-Advance",
+            "position":"Front end Developer",
             "tecnologies":
             [
-                "mdi:react",
                 "akar-icons:javascript-fill",
-                "simple-icons:vite"
-            ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
         },
         {
             "id":4,
-            "name":"Novathena Enviorement 4",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Super Color Mix",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_3.png",
+                "livemedia_4.png",
+                "livemedia_5.png"
             ],
-            "date":"2024-03-05",
-            "duration":"8 month",
+            "date":"2021-11-05",
+            "duration":"1 month",
             "enterprise":
             {
-                "logo":"tuxdi.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
             },
-            "position":"Unity 3D Developer",
+            "status":"Junior-Advance",
+            "position":"Front end Developer",
             "tecnologies":
             [
-                "devicon-plain:csharp",
-                "mdi:unity"
-            ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
         },
         {
             "id":5,
-            "name":"Novathena Enviorement 5",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Zoo-Hotel",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_6.png",
+                "livemedia_7.png",
+                "livemedia_8.png",
+                "livemedia_9.png"
             ],
-            "date":"2023-01-05",
-            "duration":"8 month",
+            "date":"2022-01-06",
+            "duration":"1 month",
             "enterprise":
             {
-                "logo":"tuxdi.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
             },
-            "position":"Unity 3D Developer",
+            "status":"Junior-Advance",
+            "position":"Front end Developer",
             "tecnologies":
             [
-                "devicon-plain:csharp",
-                "mdi:unity"
-            ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
         },
         {
             "id":6,
-            "name":"Novathena Enviorement 6",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Down with Bullying!",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_18.png",
+                "livemedia_19.png"
             ],
-            "date":"2022-01-05",
-            "duration":"8 month",
+            "date":"2022-03-06",
+            "duration":"1 month",
             "enterprise":
             {
-                "logo":"tuxdi.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
             },
-            "position":"Unity 3D Developer",
+            "status":"Junior-Advance",
+            "position":"Front end Developer",
             "tecnologies":
             [
-                "devicon-plain:csharp",
-                "mdi:unity"
-            ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
         },
         {
             "id":7,
-            "name":"Novathena Enviorement 7",
-            "resume": "I’m worked in Unity to find make a digital twin based on information tracked in real time. I’m learned a lot about good practices in Unity and C#.",
-            "gallery": 
+            "name":"Sportville",
+            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
+            "gallery":
             [
-                "perfil.jpg"
+                "livemedia_10.png",
+                "livemedia_11.png",
+                "livemedia_12.png",
+                "livemedia_13.png",
+                "livemedia_14.png",
+                "livemedia_15.png"
             ],
-            "date":"2010-01-05",
-            "duration":"8 month",
+            "date":"2022-04-06",
+            "duration":"2 month",
             "enterprise":
             {
-                "logo":"tuxdi.png",
-                "link":"https://tuxdi.com/es/inicio/"
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
             },
+            "status":"Semi-Senior",
+            "position":"Front end Developer",
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
+        },
+        {
+            "id":8,
+            "name":"Little Animals",
+            "resume": "I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2022-05-06",
+            "duration":"3 month",
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Junior-Advance",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "id":9,
+            "name":"Soccer World",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2022-08-06",
+            "duration":"2 month",
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Junior-Advance",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "id":10,
+            "name":"Fish Hero",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2022-10-06",
+            "duration":"2 month",
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Junior-Advance",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "id":11,
+            "name":"Light Off",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2023-01-06",
+            "duration":"1 month",
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Junior-Advance",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "id":12,
+            "name":"Drag Drop",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2023-09-06",
+            "duration":"current",
+            "enterprise":
+            {
+                "logo":"oneframe.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Semi-Senior",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "id":13,
+            "name":"Protect World",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2024-01-06",
+            "duration":"1 month",
+            "enterprise":
+            {
+                "logo":"oneframe.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Semi-Senior",
             "position":"Unity 3D Developer",
             "tecnologies":
             [
                 "devicon-plain:csharp",
                 "mdi:unity"
             ],
-            "link":"https://www.youtube.com/watch?v=hrEKV307eac"
+            "link":"https://play.google.com/store/apps/details?id=com.OneFrame.ProtectWorld"
+        },
+        {
+            "id":14,
+            "name":"Slime Escape",
+            "resume":"I’m worked in Unity 3D.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "date":"2024-01-06",
+            "duration":"current",
+            "enterprise":
+            {
+                "logo":"oneframe.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "status":"Semi-Senior",
+            "position":"Unity 3D Developer",
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
         }
     ]
 }
