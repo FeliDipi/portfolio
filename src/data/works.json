@@ -381,6 +381,26 @@
                 "devicon-plain:csharp",
                 "mdi:unity"
             ]
+        },
+        {
+            "id":15,
+            "name":"Oleohidraulica Colon",
+            "resume":"I’m worked as fullstack developer.",
+            "gallery":
+            [
+                "freelance_0.png"
+            ],
+            "date":"2023-10-06",
+            "duration":"1 month",
+            "status":"Semi-Senior",
+            "position":"Fullstack Developer",
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ],
+            "link":"https://felidipi.github.io/ReworkWebPapa/"
         }
     ]
 }

@@ -731,7 +731,7 @@ section
 .work-info-footer
 {
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .work-info-tecnologies

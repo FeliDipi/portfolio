@@ -1,6 +1,6 @@
 import { useGallery } from "../../hooks/useGallery.js";
 
-import WorkInfoPreview from "./WorkInfoPreview.jsx";
+import WorkInfoPreview from "./WorkPreview/WorkInfoPreview.jsx";
 import Gallery from "../Gallery.jsx";
 import WorkItem from "./WorkItem.jsx";
 
