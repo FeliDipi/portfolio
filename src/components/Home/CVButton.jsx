@@ -20,15 +20,15 @@ const CVButton = () =>
     {
         hover:
         {
-            rotate:-8
+            scale:0.95
         },
         normal:
         {
-            rotate:0
+            scale:1
         },
         tap:
         {
-            scale:0.95
+            scale:0.9
         }
     }
 

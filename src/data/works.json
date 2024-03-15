@@ -53,7 +53,7 @@
         },
         {
             "id":2,
-            "name":"Rocking over wheels",
+            "name":"Rocking on wheels",
             "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
             "gallery":
             [
@@ -75,7 +75,8 @@
                 "akar-icons:javascript-fill",
                 "flowbite:html-solid",
                 "flowbite:css-solid"
-            ]
+            ],
+            "link":"https://www.play-games.com/game/34888/rocking-on-wheels.html"
         },
         {
             "id":3,
@@ -129,7 +130,8 @@
                 "akar-icons:javascript-fill",
                 "flowbite:html-solid",
                 "flowbite:css-solid"
-            ]
+            ],
+            "link":"https://www.play-games.com/game/35814/super-color-mixer.html"
         },
         {
             "id":5,
@@ -210,7 +212,8 @@
                 "akar-icons:javascript-fill",
                 "flowbite:html-solid",
                 "flowbite:css-solid"
-            ]
+            ],
+            "link":"https://www.play-games.com/game/35615/welcome-to-sportsville.html"
         },
         {
             "id":8,
@@ -233,7 +236,8 @@
             [
                 "devicon-plain:csharp",
                 "mdi:unity"
-            ]
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.livemedia.littleanimal"
         },
         {
             "id":9,
@@ -256,7 +260,8 @@
             [
                 "devicon-plain:csharp",
                 "mdi:unity"
-            ]
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.Livemedia.SoccerWorld"
         },
         {
             "id":10,

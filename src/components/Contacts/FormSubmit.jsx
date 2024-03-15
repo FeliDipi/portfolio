@@ -7,21 +7,20 @@ const FormSubmit = ({state}) =>
     {
         hover:
         {
-            rotate:-8
-        },
-        tap:
-        {
             scale:0.95
         },
         normal:
         {
-            rotate:0
+            scale:1
+        },
+        tap:
+        {
+            scale:0.9
         },
         load:
         {
             scale:0.9,
             opacity:0.75,
-            rotate:-8,
             pointerEvents:"none"
         },
         error:
