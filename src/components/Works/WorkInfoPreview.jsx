@@ -23,7 +23,7 @@ const variants =
     }
 }
 
-const WorkInfo = () =>
+const WorkInfoPreview = () =>
 {
     const { currentItem } = useGallery();
 
@@ -72,4 +72,4 @@ const WorkInfo = () =>
     );
 }
 
-export default WorkInfo;
+export default WorkInfoPreview;

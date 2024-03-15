@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
-import { useRandomInfo } from "../../hooks/useRandomInfo.js";
+import { useInfo } from "../../hooks/useInfo.js";
 
 import AnimatedText from "../AnimatedText.jsx";
 
@@ -21,7 +21,7 @@ const variants =
 
 const HomeRandomInfo = () =>
 {
-    const { dope, controls, handlePre, handleNextDope } = useRandomInfo();
+    const { dope, controls, handlePre, handleNextDope } = useInfo();
 
     return (
         <div className="home-info-random center">

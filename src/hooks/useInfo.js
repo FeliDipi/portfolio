@@ -3,7 +3,7 @@ import { useAnimation } from "framer-motion";
 
 import { random } from "../data/random.json";
 
-export const useRandomInfo = () =>
+export const useInfo = () =>
 {
     const [index, setIndex] = useState(0);
     const controls = useAnimation();

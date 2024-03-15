@@ -1,6 +1,6 @@
 const ContactInput = ({title, type, placeholder, isTextArea = false}) =>
 {
-    const style = !isTextArea?"contact-form-input-content":"contact-form-input-content textarea";
+    const style = !isTextArea?"contact-form-input-content":"contact-form-input-content contact-form-input-textarea";
 
     return (
         <div className="contact-form-article center">

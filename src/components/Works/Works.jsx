@@ -4,7 +4,7 @@ import { useWorks } from "../../hooks/useWorks.js";
 
 import Background from "../Background.jsx";
 import WorkPreview from "./WorkPreview.jsx";
-import WorkExtended from "./WorkExtended.jsx";
+import WorkItemExtended from "./WorkExtended/WorkItemExtended.jsx";
 
 const Works = () =>
 {
@@ -15,8 +15,8 @@ const Works = () =>
             <AnimatePresence>
                 {
                     workSelected?
-                        <WorkExtended work={workSelected} close={handleClose}/>:
-                        <WorkPreview selectHandle={handleSelect}/>
+                        <WorkItemExtended work={workSelected} handleClose={handleClose}/>:
+                        <WorkPreview handleSelect={handleSelect}/>
                 }
             </AnimatePresence>
             <Background className={"work-bg"}></Background>

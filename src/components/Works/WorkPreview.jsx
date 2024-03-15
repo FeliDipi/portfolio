@@ -1,19 +1,19 @@
 import { useGallery } from "../../hooks/useGallery.js";
 
-import WorkInfo from "./WorkInfo.jsx";
+import WorkInfoPreview from "./WorkInfoPreview.jsx";
 import Gallery from "../Gallery.jsx";
 import WorkItem from "./WorkItem.jsx";
 
-const WorkPreview = ({selectHandle}) =>
+const WorkPreview = ({handleSelect}) =>
 {
     const { items } = useGallery();
 
     return (
         <>
-            <WorkInfo/>
+            <WorkInfoPreview/>
             <Gallery>
                 {
-                    items.map(work=>(<WorkItem key={work.id} data={work} selectHandle={selectHandle}/>))
+                    items.map(work=>(<WorkItem key={work.id} data={work} handleSelect={handleSelect}/>))
                 }
             </Gallery>
         </>
