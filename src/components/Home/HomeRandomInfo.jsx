@@ -1,40 +1,27 @@
 import { Icon } from "@iconify/react";
-import { random } from "../../data/random.json";
-import { useState } from "react";
-import { motion , useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+
+import { useRandomInfo } from "../../hooks/useRandomInfo.js";
+
 import AnimatedText from "../AnimatedText.jsx";
+
+const variants =
+{
+    visible:
+    {
+        opacity:1,
+        y:0
+    },
+    hidden:
+    {
+        opacity:0,
+        y:5
+    }
+}
 
 const HomeRandomInfo = () =>
 {
-    const [index, setIndex] = useState(0);
-    const controls = useAnimation();
-
-    const dope = random[index];
-
-    const variants =
-    {
-        visible:
-        {
-            opacity:1,
-            y:0
-        },
-        hidden:
-        {
-            opacity:0,
-            y:5
-        }
-    }
-
-    const handlePre = () =>
-    {
-        controls.start("hidden");
-    }
-
-    const handleNextDope = () =>
-    {
-        setIndex((prev)=>((prev+1)%random.length));
-        controls.start("visible");
-    }
+    const { dope, controls, handlePre, handleNextDope } = useRandomInfo();
 
     return (
         <div className="home-info-random center">

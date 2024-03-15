@@ -1,23 +1,28 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { BUTTON_STATE } from "../../consts/buttonStates.js";
+
 import images from "../../hooks/useImage.js";
 
-const WorkItem = ({data, selectHandle}) => {
-  const variants = {
-    open:{
-        backgroundColor:"#23B684",
-        rotate:"0deg"
-    },
-    close:
-    {
-        backgroundColor:"#0F595E",
-        rotate:"15deg"
-    },
-    tap:
-    {
-        scale:0.95
-    }
+const variants = 
+{
+  normal:
+  {
+      backgroundColor:"#0F595E",
+      rotate:"15deg"
+  },
+  hover:
+  {
+      backgroundColor:"#23B684",
+      rotate:"0deg"
+  },
+  tap:
+  {
+      scale:0.95
   }
+}
+
+const WorkItem = ({data, selectHandle}) => {
 
   const imageKey = `/src/assets/images/${data.gallery[0]}`;
 
@@ -29,12 +34,12 @@ const WorkItem = ({data, selectHandle}) => {
       <div className="work-item-gradient"></div>
       <div className="work-item-expand center">
         <motion.div 
-          initial={"close"}
-          whileTap={"tap"}
-          whileHover={"open"}
-          variants={variants}
-          onClick={()=>selectHandle(data)}
           className="work-item-expand-bg"
+          initial={BUTTON_STATE.NORMAL}
+          whileHover={BUTTON_STATE.HOVER}
+          whileTap={BUTTON_STATE.TAP}
+          onClick={()=>selectHandle(data)}
+          variants={variants}
         ></motion.div>
         <Icon className="work-item-expand-icon" icon="material-symbols:more" />
       </div>

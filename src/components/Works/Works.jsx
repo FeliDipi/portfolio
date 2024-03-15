@@ -1,7 +1,10 @@
+import { AnimatePresence } from "framer-motion";
+
+import { useWorks } from "../../hooks/useWorks.js";
+
+import Background from "../Background.jsx";
 import WorkPreview from "./WorkPreview.jsx";
 import WorkExtended from "./WorkExtended.jsx";
-import { useWorks } from "../../hooks/useWorks.js";
-import { AnimatePresence } from "framer-motion";
 
 const Works = () =>
 {
@@ -16,12 +19,7 @@ const Works = () =>
                         <WorkPreview selectHandle={handleSelect}/>
                 }
             </AnimatePresence>
-            <div className="bg work-bg center">
-                <div className="bg-border-back"></div>
-                <div className="bg-border-top"></div>
-                <div className="bg-border-bottom"></div>
-                <div className="bg-content"></div>
-            </div>
+            <Background className={"work-bg"}></Background>
         </section>
     )
 }

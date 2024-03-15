@@ -1,16 +1,17 @@
 import { motion, stagger, useAnimate } from "framer-motion";
-import MenuButtonSection from "./MenuButtonSection.jsx";
 import { useEffect } from "react";
+
+import NavbarButtonSection from "./NavbarButtonSection.jsx";
 
 const staggerMenuItems = stagger(0.1, {startDelay:0.15});
 
-const Menu = ({isOpen}) =>
+const NavbarMobileMenu = ({isOpen}) =>
 {
     const [scope, animate] = useAnimate();
 
     useEffect(() => {
         animate(
-            ".mobile-menu-btn-content",
+            ".navbar-button-section-content",
             isOpen
                 ? { x:"0%" }
                 : { x:"200%" },
@@ -24,14 +25,14 @@ const Menu = ({isOpen}) =>
 
     return (
         <motion.div 
-            className="mobile-menu center"
+            className="navbar-mobile-menu center"
             ref={scope}
         >
-            <MenuButtonSection icon="ri:user-fill" section="home"/>
-            <MenuButtonSection icon="ic:sharp-work" section="works"/>
-            <MenuButtonSection icon="ion:mail" section="contact"/>
+            <NavbarButtonSection icon="ri:user-fill" section="home"/>
+            <NavbarButtonSection icon="ic:sharp-work" section="works"/>
+            <NavbarButtonSection icon="ion:mail" section="contact"/>
         </motion.div>
     );
 }
 
-export default Menu;
+export default NavbarMobileMenu;

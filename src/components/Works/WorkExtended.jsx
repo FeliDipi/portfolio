@@ -1,43 +1,43 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useDate } from "../../hooks/useDate.js";
 
 import images from "../../hooks/useImage.js";
+import { useDate } from "../../hooks/useDate.js";
+
+const variants = {
+    open:{
+        backgroundColor:"#23B684",
+        rotate:"0deg"
+    },
+    close:
+    {
+        backgroundColor:"#0F595E",
+        rotate:"15deg"
+    },
+    tap:
+    {
+        scale:0.95
+    }
+}
+
+const variantsEnterprise = {
+    open:{
+        backgroundColor:"#043D5D",
+        scale:0.95
+    },
+    close:
+    {
+        backgroundColor:"#0F595E"
+    },
+    tap:
+    {
+        scale:0.95
+    }
+}
 
 const WorkExtended = ({work, close}) =>
 {
     const { distance } = useDate(work.date);
-
-    const variants = {
-        open:{
-            backgroundColor:"#23B684",
-            rotate:"0deg"
-        },
-        close:
-        {
-            backgroundColor:"#0F595E",
-            rotate:"15deg"
-        },
-        tap:
-        {
-            scale:0.95
-        }
-    }
-
-    const variantsEnterprise = {
-        open:{
-            backgroundColor:"#043D5D",
-            scale:0.95
-        },
-        close:
-        {
-            backgroundColor:"#0F595E"
-        },
-        tap:
-        {
-            scale:0.95
-        }
-    }
 
     const logoKey = `/src/assets/images/${ work.enterprise.logo}`;
     const imageKey = `/src/assets/images/${ work.gallery[0] }`;

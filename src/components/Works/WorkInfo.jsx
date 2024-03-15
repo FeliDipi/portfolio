@@ -1,12 +1,27 @@
 import { Icon } from "@iconify/react";
-import { useDate } from "../../hooks/useDate.js";
-
-import AnimatedText from "../AnimatedText.jsx";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useGallery } from "../../hooks/useGallery.js";
 
 import images from "../../hooks/useImage.js";
+
+import { useDate } from "../../hooks/useDate.js";
+import { useGallery } from "../../hooks/useGallery.js";
+
+import AnimatedText from "../AnimatedText.jsx";
+
+const variants =
+{
+    visible:
+    {
+        opacity:1,
+        y:0
+    },
+    hidden:
+    {
+        opacity:0,
+        y:5
+    }
+}
 
 const WorkInfo = () =>
 {
@@ -23,20 +38,6 @@ const WorkInfo = () =>
     const tecnologies = work.tecnologies;
 
     const header = `${distance} - ${status} - ${position}`
-
-    const variants =
-    {
-        visible:
-        {
-            opacity:1,
-            y:0
-        },
-        hidden:
-        {
-            opacity:0,
-            y:5
-        }
-    }
 
     useEffect(()=>
     {
