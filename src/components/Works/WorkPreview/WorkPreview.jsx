@@ -11,7 +11,7 @@ const WorkPreview = () =>
     return (
         <div className="works-preview">
             <WorkInfoPreview/>
-            <Gallery items={works} onChangeSlide={handleSelect}>
+            <Gallery onChangeSlide={handleSelect}>
                 {
                     works.map((work,idx)=>(<WorkItem key={work.id} data={work} index={idx} length={works.length}/>))
                 }

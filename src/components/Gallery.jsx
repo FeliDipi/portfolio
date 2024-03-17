@@ -10,9 +10,10 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const Gallery = ({children, items, autoDelay = 5000, onChangeSlide}) =>
+const Gallery = ({children, onChangeSlide, autoDelay = 5000, loop = false}) =>
 {
-  const {currentIndex, setIndex, dragX, onDragEnd} = useGallery({items, autoDelay});
+  const length = children.length;
+  const {currentIndex, setIndex, dragX, onDragEnd} = useGallery({length, autoDelay, loop});
 
   useEffect(()=>
   {
@@ -32,7 +33,7 @@ const Gallery = ({children, items, autoDelay = 5000, onChangeSlide}) =>
             x: dragX,
           }}
           animate={{
-            translateX: `-${currentIndex * 100/items.length}%`,
+            translateX: `-${currentIndex * 100/length}%`,
           }}
           transition={SPRING_OPTIONS}
           onDragEnd={onDragEnd}
@@ -43,7 +44,7 @@ const Gallery = ({children, items, autoDelay = 5000, onChangeSlide}) =>
           }
         </motion.div>
       </div>
-      <Dots items={items} currentIndex={currentIndex} setIndex={setIndex}/>
+      <Dots length={length} currentIndex={currentIndex} setIndex={setIndex}/>
     </div>
   );
 }
