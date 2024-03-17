@@ -1,9 +1,7 @@
 import './App.css';
 
-import { works } from "./data/works.json";
-
-import { GalleryProvider } from './providers/GalleryContext.jsx';
 import { SectionsProvider } from './providers/SectionsContext.jsx';
+import { WorkProvider } from './providers/WorkContext.jsx';
 
 import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './components/Home/Home.jsx';
@@ -19,9 +17,9 @@ const App = () =>
         <Navbar/>
       </SectionsProvider>
       <Home/>
-      <GalleryProvider items={works}>
+      <WorkProvider>
         <Works/>
-      </GalleryProvider>
+      </WorkProvider>
       <Contact/>
       <Footer/>
     </div>

@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
-import { usePreview } from "../../../hooks/usePreview.js";
 import { useDate } from "../../../hooks/useDate.js";
+import { useWorks } from "../../../hooks/useWorks.js";
 
 import AnimatedText from "../../AnimatedText.jsx";
 import WorkEnterprisePreview from "./WorkEnterprisePreview.jsx";
@@ -23,15 +24,27 @@ const variants =
 
 const WorkInfoPreview = () =>
 {
-    const { work, controls } = usePreview();
+    const { workSelected } = useWorks();
+    const controls = useAnimation();
 
-    const {distance} = useDate(work.date);
-    const header = `${distance} - ${work.status} - ${work.position}`
+    const {distance} = useDate(workSelected.date);
+    const header = `${distance} - ${workSelected.status} - ${workSelected.position}`
+
+    useEffect(()=>
+    {
+        const animation = async () =>
+        {
+            await controls.start("hidden");
+            controls.start("visible");
+        }
+
+        animation();
+    },[workSelected]);
     
     return (
         <div className="works-info center">
             <AnimatedText className="work-info-header" text={header} />
-            <AnimatedText className="work-info-title" text={work.name} />
+            <AnimatedText className="work-info-title" text={workSelected.name} />
             <motion.div
                 initial="visible"
                 animate={controls}
@@ -40,9 +53,9 @@ const WorkInfoPreview = () =>
                 className="work-info-footer center"
             >
                 {
-                    work.enterprise && <WorkEnterprisePreview logo={work.enterprise.logo}/>
+                    workSelected.enterprise && <WorkEnterprisePreview logo={workSelected.enterprise.logo}/>
                 }
-                <WorkTecnologiesPreview tecnologies={work.tecnologies}/>
+                <WorkTecnologiesPreview tecnologies={workSelected.tecnologies}/>
             </motion.div>
         </div>
     );

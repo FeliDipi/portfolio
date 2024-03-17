@@ -3,20 +3,20 @@ import { AnimatePresence } from "framer-motion";
 import { useWorks } from "../../hooks/useWorks.js";
 
 import Background from "../Background.jsx";
-import WorkPreview from "./WorkPreview.jsx";
-import WorkItemExtended from "./WorkExtended/WorkItemExtended.jsx";
+import WorkPreview from "./WorkPreview/WorkPreview.jsx";
+import WorkExtended from "./WorkExtended/WorkExtended.jsx";
 
 const Works = () =>
 {
-    const {workSelected, handleSelect, handleClose} = useWorks();
+    const {workExpanded} = useWorks();
 
     return (
         <section id="works" className="center">
             <AnimatePresence>
                 {
-                    workSelected?
-                        <WorkItemExtended work={workSelected} handleClose={handleClose}/>:
-                        <WorkPreview handleSelect={handleSelect}/>
+                    workExpanded?
+                        <WorkExtended/>:
+                        <WorkPreview/>
                 }
             </AnimatePresence>
             <Background className={"work-bg"}></Background>

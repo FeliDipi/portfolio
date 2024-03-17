@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Dots from "./Dots.jsx";
 import { useGallery } from "../hooks/useGallery.js";
+import { useEffect } from "react";
 
 const SPRING_OPTIONS = {
   type: "spring",
@@ -9,9 +10,14 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const Gallery = ({children}) =>
+const Gallery = ({children, items, autoDelay = 5000, onChangeSlide}) =>
 {
-  const {currentIndex, dragX, setIndex, onDragEnd, items} = useGallery();
+  const {currentIndex, setIndex, dragX, onDragEnd} = useGallery({items, autoDelay});
+
+  useEffect(()=>
+  {
+    onChangeSlide(currentIndex);
+  },[currentIndex])
 
   return (
     <div className="gallery center">

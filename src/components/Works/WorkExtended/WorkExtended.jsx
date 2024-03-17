@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 
 import images from "../../../hooks/useImage.js";
+import { useWorks } from "../../../hooks/useWorks.js";
 
 import WorkButton from "../WorkButton.jsx";
 import WorkInfo from "./WorkInfo.jsx";
 
-const WorkItemExtended = ({work, handleClose}) =>
+const WorkExtended = () =>
 {
-    const imageKey = `/src/assets/images/${ work.gallery[0] }`;
+    const { workSelected, handleClose } = useWorks();
+
+    const imageKey = `/src/assets/images/${ workSelected.gallery[0] }`;
 
     return (
         <motion.div 
@@ -19,9 +22,9 @@ const WorkItemExtended = ({work, handleClose}) =>
             <div className="work-extended-gallery-content center">
                 <img className="work-extended-gallery" src={images[imageKey]}/>
             </div>
-            <WorkInfo work={work}/>
+            <WorkInfo work={workSelected}/>
         </motion.div>
     );
 }
 
-export default WorkItemExtended;
+export default WorkExtended;

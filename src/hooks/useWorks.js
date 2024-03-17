@@ -1,22 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { WorkContext } from "../providers/WorkContext.jsx";
 
 export const useWorks = () =>
 {
-    const [workSelected, setWorkSelected] = useState(null);
+	const context = useContext(WorkContext);
 
-    const handleSelect = (work) =>
-    {
-        setWorkSelected(work);
-    }
+	if(context === undefined)
+	{
+		throw new Error("useWorks must be used within a Work Provider");
+	}
 
-    const handleClose = () =>
-    {
-        setWorkSelected(null);
-    }
-
-    return {
-        workSelected,
-        handleSelect,
-        handleClose
-    }
-}
+	return context;
+};
