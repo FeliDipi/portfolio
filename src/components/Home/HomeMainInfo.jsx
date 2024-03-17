@@ -4,7 +4,7 @@ const HomeMainInfo = () =>
 {
     return (
         <div className="home-info-text center">
-            <h4 className="home-info-position">Full Stack Developer / Game Developer</h4>
+            <h4 className="home-info-position">Game Developer / Full Stack Developer</h4>
             <h4 className="home-info-studies">Advanced Software Engineering Student</h4>
             <div className="home-info-university center">
                 <Icon className="home-info-university-icon" icon="mdi:university"/>

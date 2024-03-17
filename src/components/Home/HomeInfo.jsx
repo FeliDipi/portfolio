@@ -13,7 +13,7 @@ const HomeInfo = () =>
     return (
         <div className="home-content center">
             <img className="home-perfil" src={images[perfilKey]} alt="Nicolás Felipe Dipierro" />
-            <Background>
+            <Background className={"home-info-content"}>
                 <HomeMainInfo/>
                 <HomeRandomInfo/>
                 <HomeButtonCV/>

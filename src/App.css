@@ -124,7 +124,7 @@ section
   position: relative;
 
   width: 100vw;
-  height: 35vh;
+  height: fit-content;
 
   flex-direction: column;
 }
@@ -139,7 +139,7 @@ section
   bottom: 100%;
   left: 0%;
 
-  clip-path: polygon(0 55%, 100% 45%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 40%, 100% 20%, 100% 100%, 0% 100%);
   background-color: var(--color-2);
 
   z-index: 0;
@@ -155,7 +155,7 @@ section
   bottom: 99%;
   left: 0%;
 
-  clip-path: polygon(0 70%, 100% 85%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 50%, 100% 80%, 100% 100%, 0% 100%);
   background-color: var(--color-1);
 
   z-index: 2;
@@ -171,7 +171,7 @@ section
   top: 99%;
   left: 0%;
 
-  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 35%);
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 75%);
   background-color: var(--color-0);
 }
 
@@ -211,7 +211,7 @@ section
   width: 100vw;
   padding: 2rem;
   
-  gap:2.5rem;
+  gap:1.5rem;
   z-index: 1;
 }
 
@@ -548,6 +548,11 @@ section
   transform: translateY(50px);
 }
 
+.home-info-content .bg-content
+{
+  gap: 2rem;
+}
+
 .home-info-text
 {
   flex-direction: column;
@@ -588,38 +593,55 @@ section
 
 .home-info-university-text
 {
-  font-size: var(--font-small);
+  font-size: var(--font-p);
   font-weight: 600;
-
-  text-decoration: underline;
 
   color: var(--gradient-color-4);
 }
 
 .home-info-random
 {
+  position: relative;
+}
+
+.home-info-random-bg
+{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-2);
+
+  transform: rotate(-5deg) scale(0.95);
+
+  z-index: -1;
+}
+
+.home-info-random-content
+{
   gap: 0.5rem;
-  flex-direction: column;
+  padding: 1rem;
+
+  background-color: var(--color-1);
 }
 
 .home-info-random-icon
 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 
-  color: var(--gradient-color-4);
+  color: var(--gradient-color-2);
 }
 
 .home-info-random-text
 {
-  height: 40px;
-
   text-align: center;
 
   font-size: var(--font-small);
-  font-weight: 700;
+  font-weight: 600;
 
-  color: var(--gradient-color-4);
+  color: var(--gradient-color-2);
 }
 
 .inline-block

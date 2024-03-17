@@ -24,17 +24,21 @@ const HomeRandomInfo = () =>
     const { dope, controls, handlePre, handleNextDope } = useInfo();
 
     return (
-        <div className="home-info-random center">
-            <motion.div
-                initial="visible"
-                animate={controls}
-                variants={variants}
-                transition={{duration:0.25}}
-            >
-                <Icon className="home-info-random-icon" icon={dope.icon} />
-            </motion.div>
-            <AnimatedText className={"home-info-random-text"} text={dope.text} repeatDelay={7500} preHandle={handlePre} postHandle={handleNextDope}/>
-        </div>
+        <motion.div className="home-info-random center" layout>
+            <div className="home-info-random-bg"></div>
+            <div className="home-info-random-content center">
+                <motion.div
+                    initial="visible"
+                    animate={controls}
+                    variants={variants}
+                    transition={{duration:0.25}}
+                    className="center"
+                >
+                    <Icon className="home-info-random-icon" icon={dope.icon} />
+                </motion.div>
+                <AnimatedText className={"home-info-random-text"} text={dope.text} repeatDelay={7500} preHandle={handlePre} postHandle={handleNextDope}/>
+            </div>
+        </motion.div>
     );
 }
 
