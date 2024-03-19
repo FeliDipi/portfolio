@@ -23,8 +23,9 @@ const WorkExtended = () =>
                     workSelected.gallery.map((imgTag, idx) => {
                         const imageKey = `/src/assets/images/${ imgTag }`;
                         return (
-                            <div key={idx} className="gallery-item center">
-                                <img src={images[imageKey]}/>
+                            <div key={idx} className="gallery-item work-extended-item center">
+                                <img className="work-extended-img-bg" src={images[imageKey]}/>
+                                <img className="work-extended-img" src={images[imageKey]}/>
                             </div>
                         )
                     })
