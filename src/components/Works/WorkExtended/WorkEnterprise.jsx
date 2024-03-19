@@ -22,15 +22,17 @@ const variants =
 
 const WorkEnterprise = ({enterprise}) =>
 {
-    const logoKey = `/src/assets/images/${enterprise.logo}`;
-    const title = enterprise.my?"My little studio":"Enterprise";
+    const { logo, link, my } = enterprise;
+
+    const logoKey = `/src/assets/images/${logo}`;
+    const title = my?"My little studio":"Enterprise";
 
     return (
         <div className="work-extended-enterprise-content center">
             <p className="work-extended-enterprise-text">{title}:</p>
             <motion.a 
                 className="work-extended-enterprise-logo-content center" 
-                href={enterprise.link} 
+                href={link} 
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={BUTTON_STATE.NORMAL}

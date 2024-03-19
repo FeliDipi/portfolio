@@ -5,6 +5,7 @@ import WorkPosition from "./WorkPosition.jsx";
 import WorkTecnologies from "./WorkTecnologies.jsx";
 import WorkLink from "./WorkLink.jsx";
 import WorkDate from "./WorkDate.jsx";
+import WorkReference from "./WorkReference.jsx";
 
 const WorkInfo = ({work}) =>
 {
@@ -16,8 +17,11 @@ const WorkInfo = ({work}) =>
                     <WorkEnterprise enterprise={work.enterprise}/>:
                     <WorkFreelance/>
             }
-            <WorkPosition status={work.status} position={work.position}/>
+            <WorkPosition job={work.job}/>
             <WorkTecnologies tecnologies={work.tecnologies}/>
+            {
+                work.reference && <WorkReference reference={work.reference}/>
+            }
             { 
                 work.link && <WorkLink link={work.link}/>
             }
@@ -27,7 +31,7 @@ const WorkInfo = ({work}) =>
                     work.resume
                 }
             </p>
-            <WorkDate date={work.date} duration={work.duration}/>
+            <WorkDate time={work.time}/>
         </Background>
     );
 }

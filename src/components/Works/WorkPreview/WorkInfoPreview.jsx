@@ -24,11 +24,13 @@ const variants =
 
 const WorkInfoPreview = () =>
 {
-    const { workSelected } = useWorks();
     const controls = useAnimation();
+    const { workSelected } = useWorks();
 
-    const {distance} = useDate(workSelected.date);
-    const header = `${distance} - ${workSelected.status} - ${workSelected.position}`
+    const {distance} = useDate(workSelected.time.date);
+    const { status, position } = workSelected.job;
+
+    const header = `${distance} - ${status} - ${position}`
 
     useEffect(()=>
     {

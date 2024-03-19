@@ -956,7 +956,7 @@ section
   width: auto;
 }
 
-.work-extended-position
+.work-extended-position, .work-extended-reference-content
 {
   width: 100%;
 
@@ -964,6 +964,12 @@ section
   font-weight: 600;
 
   color: var(--gradient-color-2);
+}
+
+.work-extended-reference
+{
+  color: var(--gradient-color-2);
+  text-decoration: underline;
 }
 
 .work-extended-tecnologies-content
