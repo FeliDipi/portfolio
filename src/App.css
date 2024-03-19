@@ -269,13 +269,13 @@ section
 
   justify-content: flex-start;
 
+  background-color: var(--gradient-color-2);
+
   overflow: hidden;
 }
 
 .dots-slide
 {
-  background-color: var(--gradient-color-2);
-
   width: fit-content;
   height: 100%;
 
