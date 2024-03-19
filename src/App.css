@@ -211,8 +211,6 @@ section
   height: 70vh;
 
   flex-direction: column;
-
-  gap: 1.5rem;
 }
 
 .gallery-content
@@ -242,6 +240,8 @@ section
 .pagination
 {
   position: relative;
+  transform: translateY(-25px);
+  z-index: 1;
 }
 
 .dots-bg
@@ -253,7 +253,7 @@ section
 
   background-color: var(--gradient-color-4);
 
-  transform: rotateZ(-15deg);
+  transform: rotateZ(-8deg) scale(1.125);
 
   z-index: -1;
 }

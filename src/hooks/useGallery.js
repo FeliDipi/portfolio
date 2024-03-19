@@ -7,24 +7,18 @@ export const useGallery = ({length, autoDelay, loop}) =>
 
     const dragX = useMotionValue(0);
   
-    const nextPage = (isLoop) =>
+    const nextPage = (page) =>
     {
-      let newIndex = currentIndex + 1;
-
-      if(newIndex===length && isLoop) newIndex = 0;
-      else if(newIndex===length && !isLoop) newIndex = length-1;
-
-      return newIndex;
+        if(page+1>=length && loop) return 0;
+        else if(page+1>=length) return length-1;
+        else return page+1;
     }
 
-    const backPage = (isLoop) =>
+    const backPage = (page) =>
     {
-      let newIndex = currentIndex - 1;
-
-      if(newIndex<0 && isLoop) newIndex = length-1;
-      else if(newIndex<0 && !isLoop) newIndex = 0;
-
-      return newIndex;
+      if(page-1<0 && loop) return length-1;
+      else if(page-1< 0) return 0;
+      else return page-1;
     }
 
     useEffect(() => {
@@ -33,8 +27,7 @@ export const useGallery = ({length, autoDelay, loop}) =>
   
         if (x === 0) 
         {
-          const newIndex = nextPage(true);
-          setIndex(newIndex);
+          setIndex((prev)=>(prev+1)%length);
         }
       }, autoDelay);
   
@@ -43,11 +36,11 @@ export const useGallery = ({length, autoDelay, loop}) =>
   
     const onDragEnd = () => {
       const x = dragX.get();
-  
+
       if (x < 0) {
-        setIndex(nextPage(loop));
+        setIndex((prev)=>nextPage(prev));
       } else if (x > 0) {
-        setIndex(backPage(loop));
+        setIndex((prev)=>backPage(prev));
       }
     };
 
