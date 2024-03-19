@@ -12,7 +12,7 @@ const variants =
     },
     normal:
     {
-        backgroundColor:"#0F595E"
+        backgroundColor:"#032E46"
     },
     tap:
     {
