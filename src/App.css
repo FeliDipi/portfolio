@@ -132,6 +132,7 @@ section
 .bg-border-back
 {
   position: absolute;
+  pointer-events: none;
 
   width: 100vw;
   height: 100px;
@@ -148,6 +149,7 @@ section
 .bg-border-top
 {
   position: absolute;
+  pointer-events: none;
 
   width: 100vw;
   height: 100px;
@@ -164,6 +166,7 @@ section
 .bg-border-bottom
 {
   position: absolute;
+  pointer-events: none;
 
   width: 100vw;
   height: 100px;
@@ -205,7 +208,7 @@ section
 
 .gallery
 {
-  justify-content: flex-start;
+  position: relative;
 
   width: 90vw;
   height: 70vh;
@@ -239,9 +242,10 @@ section
 
 .pagination
 {
-  position: relative;
-  transform: translateY(-25px);
-  z-index: 1;
+  position: absolute;
+  bottom: 0%;
+  transform: translateY(15px);
+  z-index: 10;
 }
 
 .dots-bg
@@ -672,6 +676,8 @@ section
   cursor: pointer;
 
   gap: 0.5rem;
+
+  z-index: 15;
 }
 
 .work-button-bg
@@ -719,6 +725,7 @@ section
   flex-direction: column;
 
   gap: 2rem;
+  padding-bottom: 3rem;
 }
 
 .works-info
@@ -857,20 +864,28 @@ section
   transform: translateY(-75px);
 }
 
-.work-extended-gallery-content
-{
-  background-color: var(--gradient-color-2);
-
-  width: 100%;
-  height: 50%;
-
-  overflow: hidden;
-}
-
 .work-extended-gallery
 {
+  max-height: 50%;
+  height: 50%;
+  background-color: var(--color-0);
+}
+
+.work-extended-gallery .pagination
+{
+  transform: scale(0.75) translateY(25px);
+}
+
+.work-extended-gallery .gallery-item
+{
+  pointer-events: none;
   height: 100%;
+}
+
+.work-extended-gallery .gallery-item img
+{
   width: auto;
+  height: 100%;
 }
 
 .work-extended-bg
@@ -1230,6 +1245,12 @@ section
   }
 
   .work-extended-gallery
+  {
+    max-height: 60%;
+    height: 60%;
+  }
+
+  .work-extended-gallery .gallery-item img
   {
     width: 100%;
     height: auto;

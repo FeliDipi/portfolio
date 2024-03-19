@@ -12,21 +12,24 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const Gallery = ({children, onChangeSlide, autoDelay = 5000, loop = false}) =>
+const Gallery = ({children, className, onChangeSlide, autoDelay = 5000, loop = false}) =>
 {
   const length = children.length;
   const {currentIndex, setIndex, dragX, onDragEnd} = useGallery({length, autoDelay, loop});
 
+  var mainStyle = "gallery center";
+  if(className) mainStyle += ` ${className}`
+
   useEffect(()=>
   {
-    onChangeSlide(currentIndex);
+    if(onChangeSlide) onChangeSlide(currentIndex);
   },[currentIndex])
 
   return (
-    <div className="gallery center">
+    <div className={mainStyle}>
       <div className="gallery-content">
         <motion.div
-          drag="x"
+          drag={length>1?"x":false}
           dragConstraints={{
             left: 0,
             right: 0,
@@ -46,7 +49,9 @@ const Gallery = ({children, onChangeSlide, autoDelay = 5000, loop = false}) =>
           }
         </motion.div>
       </div>
-      <Pagination length={length} currentIndex={currentIndex} setIndex={setIndex}/>
+      {
+        length>=3 && <Pagination length={length} currentIndex={currentIndex} setIndex={setIndex}/>
+      }
     </div>
   );
 }
