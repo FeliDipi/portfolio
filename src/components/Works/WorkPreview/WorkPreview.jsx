@@ -1,7 +1,7 @@
 import { useWorks } from "../../../hooks/useWorks.js";
 
 import WorkInfoPreview from "./WorkInfoPreview.jsx";
-import Gallery from "../../Gallery.jsx";
+import Gallery from "../../Gallery/Gallery.jsx";
 import WorkItem from "./WorkItem.jsx";
 
 const WorkPreview = () =>
@@ -9,7 +9,7 @@ const WorkPreview = () =>
     const { works, handleSelect } = useWorks();
 
     return (
-        <div className="works-preview">
+        <div className="works-preview center">
             <WorkInfoPreview/>
             <Gallery onChangeSlide={handleSelect}>
                 {

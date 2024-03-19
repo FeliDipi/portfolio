@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import Dots from "./Dots.jsx";
-import { useGallery } from "../hooks/useGallery.js";
 import { useEffect } from "react";
+
+import { useGallery } from "../../hooks/useGallery.js";
+
+import Pagination from "./Pagination.jsx";
 
 const SPRING_OPTIONS = {
   type: "spring",
@@ -44,7 +46,7 @@ const Gallery = ({children, onChangeSlide, autoDelay = 5000, loop = false}) =>
           }
         </motion.div>
       </div>
-      <Dots length={length} currentIndex={currentIndex} setIndex={setIndex}/>
+      <Pagination length={length} currentIndex={currentIndex} setIndex={setIndex}/>
     </div>
   );
 }

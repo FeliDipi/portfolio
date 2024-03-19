@@ -205,20 +205,20 @@ section
 
 .gallery
 {
+  justify-content: flex-start;
+
+  width: 90vw;
+  height: 70vh;
+
   flex-direction: column;
 
-  max-width: 700px;
-  width: 100vw;
-  padding: 2rem;
-  
-  gap:1.5rem;
-  z-index: 1;
+  gap: 1.5rem;
 }
 
 .gallery-content
 {
   width: 100%;
-  height: 55vh;
+  height: 100%;
 
   overflow: hidden;
 }
@@ -233,69 +233,72 @@ section
 {
   position: relative;
 
-  max-width: calc(700px - 4rem);
-  width: calc(100vw - 4rem);
+  width: 90vw;
   height: 100%;
 
   overflow: hidden;
 }
 
-.dots-content
-{
-  max-width: 350px;
-  width: 100%;
-  height: 50px;
-}
-
-.dots-slide
+.pagination
 {
   position: relative;
-
-  width: 100%;
-  height: 100%;
 }
 
 .dots-bg
 {
   position: absolute;
 
-  width: 100%;
-  height: 100%;
+  height: 50px;
+  width: 105px;
 
   background-color: var(--gradient-color-4);
 
-  z-index: -1;
+  transform: rotateZ(-15deg);
 
-  transform: rotateZ(-3deg) scale(1.05);
+  z-index: -1;
 }
 
-.dots-view
+.dots
+{
+  height: 50px;
+  width: 105px;
+
+  justify-content: flex-start;
+
+  overflow: hidden;
+}
+
+.dots-slide
 {
   background-color: var(--gradient-color-2);
 
-  gap:0.75rem;
-  padding: 1.5rem;
-
-  width: 100%;
+  width: fit-content;
   height: 100%;
 
-  overflow: hidden;
+  gap:20px;
+  padding: 10px;
 }
 
 .dot
 {
   cursor: pointer;
 
-  min-width: 15px;
   width: 15px;
   height: 15px;
 
   border: none;
   box-shadow: var(--shadow-0);
 
-  transform: rotateZ(20deg);
+  transform: rotateZ(20deg) scale(0.75);
 
   transition: 0.25s all ease-in-out;
+}
+
+.dot-corner
+{
+  background-color: var(--color-2);
+
+  transform: rotateZ(20deg) scale(1);
 }
 
 .dot-selected
@@ -304,12 +307,6 @@ section
   transform: scale(1.5);
 
   background-color: var(--gradient-color-3);
-}
-
-.dot-unselected
-{
-  border-radius: 0%;
-  background-color: var(--color-1);
 }
 
 /* Navbar */
@@ -718,6 +715,10 @@ section
 .works-preview
 {
   z-index: 1;
+
+  flex-direction: column;
+
+  gap: 2rem;
 }
 
 .works-info
@@ -844,10 +845,8 @@ section
 
   overflow: hidden;
 
-  max-width: 700px;
-
-  width: 90%;
-  height: 75vh;
+  width: 90vw;
+  height: 80vh;
 
   border-radius: 15px;
 
@@ -862,9 +861,8 @@ section
 {
   background-color: var(--gradient-color-2);
 
-  max-width: 700px;
   width: 100%;
-  height: 100%;
+  height: 50%;
 
   overflow: hidden;
 }
@@ -878,7 +876,7 @@ section
 .work-extended-bg
 {
   flex-direction: column;
-  height: 40vh;
+  height: 50%;
   width: 100%;
 }
 
@@ -1198,6 +1196,13 @@ section
 
 @media screen and (min-width:700px) {
 
+  /* Gallery */
+
+  .gallery, .gallery-item
+  {
+    width: 50vw;
+  }
+
   /* Navbar */
 
   .navbar-mobile
@@ -1219,12 +1224,15 @@ section
 
   /* Works */
 
+  .work-extended
+  {
+    width: 50vw;
+  }
+
   .work-extended-gallery
   {
     width: 100%;
     height: auto;
-
-    aspect-ratio: 16/9;
   }
 
   /* Contact */
