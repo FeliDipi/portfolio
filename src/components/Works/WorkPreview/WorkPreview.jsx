@@ -13,7 +13,7 @@ const WorkPreview = () =>
             <WorkInfoPreview/>
             <Gallery onChangeSlide={handleSelect}>
                 {
-                    works.map((work,idx)=>(<WorkItem key={work.id} data={work} index={idx} length={works.length}/>))
+                    works.map((work,idx)=>(<WorkItem key={idx} data={work} index={idx} length={works.length}/>))
                 }
             </Gallery>
         </div>

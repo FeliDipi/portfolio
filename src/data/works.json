@@ -2,9 +2,42 @@
     "works":
     [
         {
-            "id":0,
+            "name":"Alphaverse - Frontend",
+            "resume":"Worked on the development of a Metaverse style MMO called Alphaverse, worked on Unity 3D as a frontend developer connecting features with backend and developing features for multiplayer.",
+            "gallery":
+            [
+                "trick_0.png"
+            ],
+            "time":
+            {
+                "date":"2023-11-24",
+                "duration":"8 month"
+            },
+            "enterprise":
+            {
+                "logo":"trick.png",
+                "link":"http://www.trickgs.com/"
+            },
+            "job":
+            {
+                "status":"Semi-Senior",
+                "position":"Unity 3D Developer"
+            },
+            "reference":
+            {
+                "name":"Matias Gonzalez",
+                "link":"https://www.linkedin.com/in/matias-gonzalez-bernal/"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://home.alphaverse.com/"
+        },
+        {
             "name":"Novathena - 3D Environment",
-            "resume": "Work on building and optimizing simulated 3D environments in Unity, with Webgl support to be displayed in a browser. An incredible experience working and polishing optimization techniques to achieve a realistic result while maintaining fluidity in the browser.",
+            "resume": "Work on the development of simulated 3D environments for WebGL with Unity 3D, from the integration of the environments, scene control, optimization techniques, rendering, etc.",
             "gallery":
             [
                 "tuxdi_0.gif",
@@ -39,82 +72,8 @@
             "link":"https://novathena.ai/"
         },
         {
-            "id":1,
-            "name":"Alphaverse - Frontend",
-            "resume":"I have worked as a front end developer in Unity 3D, adding, polishing, refactoring and connecting with backend new and existing functionalities in the Alphaverse Metaverse. A great experience where I substantially improved my performance by following development methodologies, good programming practices and working as a team. I was fortunate to share a team with colleagues with much more experience and with the willingness and good will to share that experience.",
-            "gallery":
-            [
-                "trick_0.png"
-            ],
-            "time":
-            {
-                "date":"2023-11-24",
-                "duration":"8 month"
-            },
-            "enterprise":
-            {
-                "logo":"trick.png",
-                "link":"http://www.trickgs.com/"
-            },
-            "job":
-            {
-                "status":"Semi-Senior",
-                "position":"Unity 3D Developer"
-            },
-            "reference":
-            {
-                "name":"Matias Gonzalez",
-                "link":"https://www.linkedin.com/in/matias-gonzalez-bernal/"
-            },
-            "tecnologies":
-            [
-                "devicon-plain:csharp",
-                "mdi:unity"
-            ],
-            "link":"https://home.alphaverse.com/"
-        },
-        {
-            "id":2,
-            "name":"Rocking on wheels",
-            "resume": "I’m worked in Phaser framerwork of javascript that give support to make videogames for browser.",
-            "gallery":
-            [
-                "livemedia_0.png",
-                "livemedia_1.png",
-                "livemedia_2.png"
-            ],
-            "time":
-            {
-                "date":"2021-09-06",
-                "duration":"1 month"
-            },
-            "enterprise":
-            {
-                "logo":"livemedia.png",
-                "link":"https://livemedia.com.ar/"
-            },
-            "job":
-            {
-                "status":"Junior-Advance",
-                "position":"Front end Developer"
-            },
-            "reference":
-            {
-                "name":"Gastón González Cortez",
-                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
-            },
-            "tecnologies":
-            [
-                "akar-icons:javascript-fill",
-                "flowbite:html-solid",
-                "flowbite:css-solid"
-            ],
-            "link":"https://www.play-games.com/game/34888/rocking-on-wheels.html"
-        },
-        {
-            "id":12,
             "name":"Drag Drop",
-            "resume":"I’m worked in Unity 3D.",
+            "resume":"This is a rework of the first game that I managed to finish and publish, after years, and with experience gained, I made the decision to create a small studio, and with an even more professional stance, recreate the game.",
             "gallery":
             [
                 "livemedia_0.png"
@@ -142,9 +101,38 @@
             ]
         },
         {
-            "id":15,
+            "name":"Protect World",
+            "resume":"It was born as a mechanical prototype, to which I decided to add a theme to end up becoming the first game of my small studio, a simple but entertaining game for the entire public.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "time":
+            {
+                "date":"2024-01-03",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"oneframe.png",
+                "link":"",
+                "my":true
+            },
+            "job":
+            {
+                "status":"Semi-Senior",
+                "position":"Unity 3D Developer"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.OneFrame.ProtectWorld"
+        },
+        {
             "name":"Oleohidraulica Colon",
-            "resume":"I’m worked as fullstack developer.",
+            "resume":"My first website developed entirely by me, from the design, information management, development and deployment of it.",
             "gallery":
             [
                 "freelance_0.png"
@@ -171,6 +159,364 @@
                 "flowbite:css-solid"
             ],
             "link":"https://felidipi.github.io/ReworkWebPapa/"
+        },
+        {
+            "name":"Light Off",
+            "resume": "Development in Unity 3D for mobile as a solo dev.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "time":
+            {
+                "date":"2023-01-06",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "name":"Fish Hero",
+            "resume": "Development in Unity 3D for mobile as a solo dev.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "time":
+            {
+                "date":"2022-10-06",
+                "duration":"2 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ]
+        },
+        {
+            "name":"Soccer World",
+            "resume": "My first development in Unity 3D in a paid position as a solo dev.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "time":
+            {
+                "date":"2022-08-06",
+                "duration":"2 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.Livemedia.SoccerWorld"
+        },
+        {
+            "name":"Little Animals",
+            "resume": "My first interaction as a professional developer in Unity 3D, working on a game in the final stage of development, solving bugs, refactoring and polishing.",
+            "gallery":
+            [
+                "livemedia_0.png"
+            ],
+            "time":
+            {
+                "date":"2022-05-06",
+                "duration":"3 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "devicon-plain:csharp",
+                "mdi:unity"
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.livemedia.littleanimal"
+        },
+        {
+            "name":"Down with Bullying!",
+            "resume": "Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_18.png",
+                "livemedia_19.png"
+            ],
+            "time":
+            {
+                "date":"2022-04-06",
+                "duration":"2 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
+        },
+        {
+            "name":"Sportville",
+            "resume": "Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_10.png",
+                "livemedia_11.png",
+                "livemedia_12.png",
+                "livemedia_13.png",
+                "livemedia_14.png",
+                "livemedia_15.png"
+            ],
+            "time":
+            {
+                "date":"2022-03-06",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ],
+            "link":"https://www.play-games.com/game/35615/welcome-to-sportsville.html"
+        },
+        {
+            "name":"Zoo-Hotel",
+            "resume": "Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_6.png",
+                "livemedia_7.png",
+                "livemedia_8.png",           
+                "livemedia_9.png"
+            ],
+            "time":
+            {
+                "date":"2022-01-06",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior-Advance",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
+        },
+        {
+            "name":"Piramid Mini Beats",
+            "resume": "Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_20.png",
+                "livemedia_21.png",
+                "livemedia_22.png",           
+                "livemedia_23.png",
+                "livemedia_24.png"
+            ],
+            "time":
+            {
+                "date":"2021-11-05",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ]
+        },
+        {
+            "name":"Super Color Mix",
+            "resume": "Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_3.png",
+                "livemedia_4.png",
+                "livemedia_5.png"
+            ],
+            "time":
+            {
+                "date":"2021-10-02",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ],
+            "link":"https://www.play-games.com/game/35814/super-color-mixer.html"
+        },
+        {
+            "name":"Rocking on wheels",
+            "resume": "My first video game developed as a professional in a paid position, the beginning of the path. Development with Phaser javascript framerwork for the development of browser video games.",
+            "gallery":
+            [
+                "livemedia_0.png",
+                "livemedia_1.png",
+                "livemedia_2.png"
+            ],
+            "time":
+            {
+                "date":"2021-09-06",
+                "duration":"1 month"
+            },
+            "enterprise":
+            {
+                "logo":"livemedia.png",
+                "link":"https://livemedia.com.ar/"
+            },
+            "job":
+            {
+                "status":"Junior",
+                "position":"Front end Developer"
+            },
+            "reference":
+            {
+                "name":"Gastón González Cortez",
+                "link":"https://www.linkedin.com/in/gastongonzalezcortez/"
+            },
+            "tecnologies":
+            [
+                "akar-icons:javascript-fill",
+                "flowbite:html-solid",
+                "flowbite:css-solid"
+            ],
+            "link":"https://www.play-games.com/game/34888/rocking-on-wheels.html"
         }
     ]
 }
