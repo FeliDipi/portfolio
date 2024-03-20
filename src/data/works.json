@@ -6,7 +6,9 @@
             "resume":"Worked on the development of a Metaverse style MMO called Alphaverse, worked on Unity 3D as a frontend developer connecting features with backend and developing features for multiplayer.",
             "gallery":
             [
-                "trick_0.png"
+                "trick_0.png",
+                "trick_1.png",
+                "trick_2.png"
             ],
             "time":
             {
@@ -76,7 +78,10 @@
             "resume":"This is a rework of the first game that I managed to finish and publish, after years, and with experience gained, I made the decision to create a small studio, and with an even more professional stance, recreate the game.",
             "gallery":
             [
-                "livemedia_0.png"
+                "oneframe_4.png",
+                "oneframe_5.png",
+                "oneframe_6.png",
+                "oneframe_7.png"
             ],
             "time":
             {
@@ -105,7 +110,9 @@
             "resume":"It was born as a mechanical prototype, to which I decided to add a theme to end up becoming the first game of my small studio, a simple but entertaining game for the entire public.",
             "gallery":
             [
-                "livemedia_0.png"
+                "oneframe_0.png",
+                "oneframe_1.png",
+                "oneframe_2.png"
             ],
             "time":
             {
@@ -165,7 +172,10 @@
             "resume": "Development in Unity 3D for mobile as a solo dev.",
             "gallery":
             [
-                "livemedia_0.png"
+                "livemedia_37.png",
+                "livemedia_38.png",
+                "livemedia_39.png",
+                "livemedia_40.png"
             ],
             "time":
             {
@@ -198,7 +208,10 @@
             "resume": "Development in Unity 3D for mobile as a solo dev.",
             "gallery":
             [
-                "livemedia_0.png"
+                "livemedia_33.png",
+                "livemedia_34.png",
+                "livemedia_35.png",
+                "livemedia_36.png"
             ],
             "time":
             {
@@ -224,14 +237,18 @@
             [
                 "devicon-plain:csharp",
                 "mdi:unity"
-            ]
+            ],
+            "link":"https://play.google.com/store/apps/details?id=com.Livemedia.FishHero"
         },
         {
             "name":"Soccer World",
             "resume": "My first development in Unity 3D in a paid position as a solo dev.",
             "gallery":
             [
-                "livemedia_0.png"
+                "livemedia_29.png",
+                "livemedia_30.png",
+                "livemedia_31.png",
+                "livemedia_32.png"
             ],
             "time":
             {
@@ -265,7 +282,10 @@
             "resume": "My first interaction as a professional developer in Unity 3D, working on a game in the final stage of development, solving bugs, refactoring and polishing.",
             "gallery":
             [
-                "livemedia_0.png"
+                "livemedia_25.png",
+                "livemedia_26.png",
+                "livemedia_27.png",
+                "livemedia_28.png"
             ],
             "time":
             {

@@ -782,6 +782,18 @@ section
   border-radius: 15px;
 }
 
+.work-item-img-bg
+{
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+
+  filter: blur(4px) brightness(30%);
+
+  z-index: -1;
+}
+
 .work-item-img
 {
   width: auto;
@@ -887,7 +899,7 @@ section
 .work-extended-img-bg
 {
   width: 100%;
-  height: 100%;
+  height: auto;
 
   filter: blur(4px) brightness(30%);
 }
@@ -1268,15 +1280,10 @@ section
     height: 60%;
   }
 
-  .work-extended-img-bg
-  {
-    display: none;
-  }
-
   .work-extended-img
   {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 
   /* Contact */

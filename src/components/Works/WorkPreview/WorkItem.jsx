@@ -13,6 +13,7 @@ const WorkItem = ({data, index}) => {
     <div
       className="gallery-item work-item center"
     >
+      <img className="work-item-img-bg" src={images[imageKey]} />
       <img className="work-item-img" src={images[imageKey]} />
       <div className="work-item-gradient">
         <div className="work-item-footer center">
